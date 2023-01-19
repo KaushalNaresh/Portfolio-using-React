@@ -14,9 +14,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+    auth.onAuthStateChanged(userAuth => {
       if(userAuth){
-        console.log("USER AUTH IS: ",userAuth);
         dispatch(login({
           uid: userAuth.uid,
           email: userAuth.email,
@@ -27,7 +26,6 @@ function App() {
       }
     });
 
-    return unsubscribe;
   }, [dispatch])
 
   return (

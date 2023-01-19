@@ -12,7 +12,7 @@ function ProfileScreen() {
     <div className='profileScreen'>
         <Nav />
         <div className='profileScreen__body'>
-            <h1>Edit Profile</h1>
+            <h1>Profile</h1>
             <div className='profileScreen__info'>
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
@@ -22,7 +22,7 @@ function ProfileScreen() {
                 <div className='profileScreen__details'>
                     <h2>{user.email}</h2>
                     <div className='profileScreen__plans'>
-                        <h3>Personal Details</h3>
+                        <h3>Hi there! I hope you enjoyed perusing my resumé</h3>
                         <button 
                             onClick={() => auth.signOut()} 
                             className='profileScreen__signOut'>Sign Out</button>

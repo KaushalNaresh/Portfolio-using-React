@@ -33,7 +33,7 @@ function Nav() {
                 />
 
                 <img 
-                    onClick={() => navigate("./profile")}
+                    onClick={() => navigate("/profile")}
                     className='nav__avatar'
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                     alt=""
