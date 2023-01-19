@@ -1,0 +1,71 @@
+.education__contents{
+    display: flex;
+    flex-direction: column;
+    margin: 2px 100px;
+}
+
+@font-face {
+    font-family: 'Netflix Sans Bold';
+    src: url('./fonts/NetflixSansBold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Netflix Sans Light';
+    src: url('./fonts/NetflixSansLight.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Netflix Sans Medium';
+    src: url('./fonts/NetflixSansMedium.otf') format('otf');
+}
+
+.education__header{
+    font-size: 15px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.education__header > span:first-child{
+    color: #46d369;
+}
+
+.education__header > span:nth-child(2){
+    border: 1px solid #777;
+}
+
+.education__chronology{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.education__details{
+    display: flex;
+    flex-direction: row;
+}
+
+.education__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.education__info > span{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.education__timeline{
+    margin-left: auto;
+    text-align: center;  
+    font-size: 14px;
+}
+
+.education__timeline > span:first-child{
+    color: #777;
+}
+
+.education__info > h1{
+    font-size: 21px;
+    margin: 10px 0;
+}

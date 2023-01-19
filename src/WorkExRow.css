@@ -1,0 +1,103 @@
+.WorkExRow{
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #404040;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 20px 0;
+}
+
+.WorkExRow__imgWrapper{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.WorkExRow__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    position: relative;
+}
+
+.WorkEx__timeAddress{
+    font-size: 0.9em;
+}
+
+.WorkExRow__playButton{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    background-image: linear-gradient(
+        180deg, 
+        transparent 5%,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}
+
+.WorkExRow__playButton:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.WorkExRow__imgWrapper > img{
+    width: 12rem;
+    height: 5rem;
+}
+
+.WorkExRow__idx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #d2d2d2;
+    padding: 0 20px 0 0;
+}
+
+.WorkEx__header{
+    display: flex;
+}
+
+.WorkEx__name > span:first-child{
+    font-weight: 800;
+}
+
+.WorkEx__name > span:nth-child(2){
+    font-weight: 400;
+}
+
+.WorkEx__timeAddress{
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    font-style: italic;
+}
+
+.WorkEx__timeAddress span:nth-child(2){
+    margin-top: 5px;
+}
+
+.WorkEx__description{
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+
+.WorkEx__description li{
+    text-align: justify;
+}
+
+.WorkEx__skills{
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}

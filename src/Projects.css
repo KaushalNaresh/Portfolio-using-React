@@ -1,0 +1,29 @@
+.projects{
+    margin: 0 100px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.projects > h1{
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 0 0 20px 0;
+}
+
+.projects__row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #404040;
+}
+
+.projects__showMore__button{
+    cursor: pointer;
+    color:#9e9c9c;
+    font-size: 50px;
+}
+
+.projects__showMore__button:hover{
+    color: white;
+}
