@@ -15,7 +15,8 @@ const firebaseConfig = {
   storageBucket: "resume-c79a2.appspot.com",
   messagingSenderId: "762875040569",
   appId: "1:762875040569:web:e5cc6cb1318cf2f1194ee8",
-  measurementId: "G-CXT40NBXHG"
+  measurementId: "G-CXT40NBXHG",
+  databaseURL: "https://resume-c79a2-default-rtdb.firebaseio.com/"
 };
 
 // Initialize Firebase

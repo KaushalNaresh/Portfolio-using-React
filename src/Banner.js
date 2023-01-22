@@ -1,37 +1,42 @@
 // import axios from './axios';
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Banner.css'
 import { AiFillHeart, AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 // import { Link } from "react-router-dom";
 // import myPic from "./images/my_pic.png";
 import { Tooltip } from 'react-tooltip'
+import { getDatabase, ref, set, onValue } from "firebase/database";
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 function Banner() {
 
-//   const [movie, setMovie] = useState([]);
+    const [like, setLike] = useState(false);
+    const user = useSelector(selectUser);
 
-//   useEffect(() => {
-//     async function fetchData(){
-//         const request = await axios.get(requests.fetchNetflixOriginals);
-//         setMovie(
-//             request.data.results[
-//                 Math.floor(Math.random() * request.data.results.length-1)
-//             ]
-//         );
-//         return request;
-//     }
-//     fetchData();
-//   }, []);
+    useEffect(() => {
+        const db = getDatabase();
+        const userRef = ref(db, "users/"+user.uid+"/like");
 
-//   console.log(movie);
+        onValue(userRef, (snapshot) => {
+            const value = snapshot.val();
+            setLike(value);
+        });
 
-//   function truncate(string, n){
-//     // console.log(string)
-//     return string?.length > n ? string.substr(0, n)+'...' : string;
-//   }
+    },[user])
 
-  return (
+    function changeLike(like, user){
+        const db = getDatabase();
+        const usersRef = ref(db, 'users/'+user.uid);
+        set(usersRef, {
+            email: user.email,
+            like: like
+        });
+        setLike(like);
+    }
+
+    return (
         <header className='banner' 
         style={{
             backgroundSize: "cover",
@@ -47,15 +52,11 @@ function Banner() {
                     <a href = "mailto:09naresh3@gmail.com" className='banner__button'><MdEmail/></a>
                     <a href = "https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub/></a>
                     <a href = "https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin/></a>
-                    {/* <button className='banner__button'><AiFillLike/></button> */}
-
                 </div>
-                {/* <h1 className='banner__description'>
-                    MSCS Graduate Student and Teaching Assistant at UC Davis, actively looking for summer internships 2023 | IIT GOA - Alumnus, Institute Bronze medallist
-                </h1> */}
                 <AiFillHeart    id = "like__button" 
                                 data-tooltip-content="I like this Resume"
-                                className='resume__like'/>
+                                className={`resume__likeDislike ${like ? "like" : "dislike"}`}
+                                onClick={() => changeLike(!like, user)}/>
                 <Tooltip anchorId="like__button" arrow/>
             </div>
 
