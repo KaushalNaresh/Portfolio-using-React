@@ -8,6 +8,8 @@ export const iitgoa_description = "Awarded Institute Bronze medal for second ran
 export const iitgoa_address = "Goa, India ";
 export const iitgoa_timeline = "Aug 2017–May 2021";
 
+export const admin_email = "09naresh3@gmail.com";
+
 export const work_experiences = [
     {
         name:"WOAS Technology Pvt. Ltd. (Wooqer)",

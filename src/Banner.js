@@ -7,6 +7,7 @@ import { Tooltip } from 'react-tooltip'
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
+import  * as Constants from "./Constants";
 
 function Banner() {
 
@@ -59,7 +60,7 @@ function Banner() {
                     Naresh Kumar Kaushal <span>(he/him)</span>
                 </h1>
                 <div className='banner__buttons'>   
-                    <a href = "mailto:09naresh3@gmail.com" className='banner__button'><MdEmail/></a>
+                    <a href = "mailto:nkkaushal@ucdavis.edu" className='banner__button'><MdEmail/></a>
                     <a href = "https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub/></a>
                     <a href = "https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin/></a>
                 </div>
@@ -68,7 +69,7 @@ function Banner() {
                                 className={`resume__likeDislike ${like ? "like" : "dislike"}`}
                                 onClick={() => changeLike(!like, user)}/>
                 <Tooltip anchorId="like__button" arrow/>
-                <span className='like__count'>{user.email === "09naresh3@gmail.com" ? getTotalLikeCount()+" Likes" : ""}</span>
+                <span className='like__count'>{user.email === Constants.admin_email ? getTotalLikeCount()+" Likes" : ""}</span>
             </div>
 
             <div className='banner--fadeButton'/>
