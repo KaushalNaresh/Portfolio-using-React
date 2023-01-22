@@ -23,6 +23,11 @@
     cursor: pointer;
 }
 
+#nav__download{
+    border: none;
+    outline: none;
+}
+
 .nav__download:hover{
     color: white;
 }
