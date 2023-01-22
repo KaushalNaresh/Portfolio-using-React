@@ -37,15 +37,19 @@ function WorkExperience() {
 
         {
             Constants.work_experiences.length > workExCount && Constants.work_experiences.length > numOfVisWorkEx 
-            ?    <div className='work__experience__showMore__button' onClick={() => setnumOfVisWorkEx(numOfVisWorkEx+workExCount)}>
+            ?    <>
+                    <div className='work__experience__showMore__button' onClick={() => setnumOfVisWorkEx(numOfVisWorkEx+workExCount)}>
                                                     <IoIosArrowDropdown style={{
                                                                         position:'absolute',
                                                                         left:0,
                                                                         right:0,
                                                                         margin: '0 auto',
-                                                                        bottom: '0.6em'
+                                                                        bottom: '0.6em',
+                                                                        zIndex:'2'
                                                     }}/>
-                </div> 
+                    </div> 
+                    <div className='WorkEx--fadeButton'/>
+                </>
                 : Constants.work_experiences.length > 3 && Constants.work_experiences.length <= numOfVisWorkEx 
                 ?   <div className='work__experience__showMore__button' onClick={() => setnumOfVisWorkEx(workExCount)}>
                         <IoIosArrowDropup style={{
@@ -53,7 +57,8 @@ function WorkExperience() {
                                             left:0,
                                             right:0,
                                             margin: '0 auto',
-                                            bottom: '0.6em'
+                                            bottom: '0.6em',
+                                            zIndex:'2'
                         }}/>
                     </div> 
                 : <></>

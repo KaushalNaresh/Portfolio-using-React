@@ -36,15 +36,19 @@ function Projects() {
         </div>
         {
             Constants.activities.length > 3 && Constants.activities.length > numOfCardVis 
-            ?    <div className='projects__showMore__button' onClick={() => setNumOfCardVis(numOfCardVis+cardPerRow)}>
-                                                    <IoIosArrowDropdown style={{
-                                                                        position:'absolute',
-                                                                        left:0,
-                                                                        right:0,
-                                                                        margin: '0 auto',
-                                                                        bottom: '1.5em'
-                                                    }}/>
-                </div> 
+            ?    <>
+                    <div className='projects__showMore__button' onClick={() => setNumOfCardVis(numOfCardVis+cardPerRow)}>
+                                                        <IoIosArrowDropdown style={{
+                                                                            position:'absolute',
+                                                                            left:0,
+                                                                            right:0,
+                                                                            margin: '0 auto',
+                                                                            bottom: '1.5em',
+                                                                            zIndex:'2'
+                                                        }}/>
+                    </div> 
+                    <div className='projects--fadeButton'/>
+                </>
                 : Constants.activities.length > 3 && Constants.activities.length <= numOfCardVis 
                 ?   <div className='projects__showMore__button' onClick={() => setNumOfCardVis(cardPerRow)}>
                         <IoIosArrowDropup style={{
@@ -52,12 +56,12 @@ function Projects() {
                                             left:0,
                                             right:0,
                                             margin: '0 auto',
-                                            bottom: '1.5em'
+                                            bottom: '1.5em',
+                                            zIndex:'2'
                         }}/>
                     </div> 
                 : <></>
         }
-        
     </div>
   )
 }

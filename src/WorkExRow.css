@@ -101,3 +101,17 @@
     font-weight: 200;
     margin-bottom: 15px;
 }
+
+.WorkEx--fadeButton{
+    bottom: 3.8em;
+    position: absolute;
+    height: 7.4rem;
+    background-image: linear-gradient(
+        180deg, 
+        transparent,
+        rgba(37,37,37,0.61),
+        #141414
+    );
+    z-index: 1;
+    width: 100%;
+}
