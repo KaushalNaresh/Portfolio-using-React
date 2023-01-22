@@ -1,11 +1,12 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import { auth } from '../firebase.js';
 import "./SignUpScreen.css";
 
-function SignUpScreen() {
+function SignUpScreen({email}) {
 
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const [currEmail, setCurrEmail] = useState(email);
 
   const register = (e) => {
     e.preventDefault();
@@ -37,7 +38,7 @@ function SignUpScreen() {
     <div className='signupScreen'>
         <form>
             <h1>Sign In</h1>
-            <input ref={emailRef} placeholder='Email' type="email"/>
+            <input className={currEmail === email && "highlight"} ref={emailRef} placeholder='Email' type="email" value={currEmail} onChange={(e)=>setCurrEmail(e.target.value)}/>
             <input ref={passwordRef} placeholder='Password' type="password"/>
             <button type='submit' onClick={signIn}>Sign In</button>
 

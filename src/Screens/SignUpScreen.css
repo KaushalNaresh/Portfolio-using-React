@@ -25,6 +25,11 @@
     flex-direction: column;
 }
 
+.highlight{
+    background-color: rgb(155, 214, 155);
+    border: 2.5px solid green !important;
+}
+
 .signupScreen > form > input{
     margin-bottom: 14px;
     outline-width: 0;

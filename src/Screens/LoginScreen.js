@@ -5,6 +5,7 @@ import logo from "../images/resume_logo.png";
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
+  const [email, setEmail] = useState("");
 
   return (
     <div className='loginScreen'>
@@ -24,7 +25,7 @@ function LoginScreen() {
 
         <div className='loginScreen__body'>
             {signIn ? (
-                <SignUpScreen />
+                <SignUpScreen email={email}/>
             )
             : (
                 <>
@@ -35,7 +36,7 @@ function LoginScreen() {
                     <div className='loginScreen__input'>
                         <form>
                             <div>
-                                <input type='email' placeholder="Email Address"/>
+                                <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder="Email Address"/>
                                 <button 
                                     onClick={() => setSignIn(true)}
                                     className='loginScreen__getStarted'>
