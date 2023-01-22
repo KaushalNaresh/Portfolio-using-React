@@ -18,7 +18,7 @@
  }
 
  .profileScreen__body > h1{
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 400;
     border-bottom: 1px solid #282c2d;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@
 
 .profileScreen__signOut{
     padding: 10px 20px;
-    height: 100px;
+    height: 50px;
     font-size: 1rem;
     margin-top: 5%;
     width: 100%;

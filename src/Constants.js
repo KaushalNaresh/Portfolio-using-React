@@ -145,7 +145,7 @@ export const activities = [
         description:{
             "Implemented a supervised model": " to classify HDLSS (High Dimension Low Sample Size) data.",
             "Integrated various techniques": " like Boosting, greedy feature selection, PCA (principal component Analysis) and Deep Neural Networks (DNN) to resolve 2 main isuues of high variance and overfitting with HDLSS data.",
-            "Accuracy": ": 90%"
+            "Accuracy": " 90%"
         },
         logo:"Btech",
         link:"https://github.com/KaushalNaresh/Genomics"
@@ -157,7 +157,8 @@ export const activities = [
         description:{
             "Implemented a clone": " of popular streaming platform Netflix using React.js",
             "Included features": " like authentication using Firebase and buying a subscription plan using Stripe.",
-            "Demo": ": https://netflix-clone-991b6.web.app"
+            "Demo": ": https://netflix-clone-991b6.web.app",
+            "":"Designed a react app for my resume with a look and feel of Netflix website https://resume-c79a2.web.app"
         },
         logo:"Netflix",
         link:"https://github.com/KaushalNaresh/netflix-build"
