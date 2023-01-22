@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import "./Nav.css";
 import logo from "./images/resume_logo.png";
+import {AiOutlineDownload} from "react-icons/ai"
 
 function Nav() {
 
@@ -31,6 +32,10 @@ function Nav() {
                     src={logo}
                     alt=""
                 />
+
+                <a className = "nav__download" href="NareshKumarKaushal_Resume.pdf" download="NareshKumarKaushal_Resume.pdf">
+                    <AiOutlineDownload/>
+                </a>
 
                 <img 
                     onClick={() => navigate("/profile")}

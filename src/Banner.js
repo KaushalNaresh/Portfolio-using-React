@@ -3,8 +3,6 @@ import React, {useEffect, useState} from 'react'
 import './Banner.css'
 import { AiFillHeart, AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-// import { Link } from "react-router-dom";
-// import myPic from "./images/my_pic.png";
 import { Tooltip } from 'react-tooltip'
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import { useSelector } from 'react-redux';
@@ -57,7 +55,9 @@ function Banner() {
                                 data-tooltip-content="I like this Resume"
                                 className={`resume__likeDislike ${like ? "like" : "dislike"}`}
                                 onClick={() => changeLike(!like, user)}/>
-                <Tooltip anchorId="like__button" arrow/>
+                {
+                    !like && <Tooltip anchorId="like__button" arrow/>
+                }
             </div>
 
             <div className='banner--fadeButton'/>
