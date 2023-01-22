@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import "./Nav.css";
 import logo from "./images/resume_logo.png";
 import {AiOutlineDownload} from "react-icons/ai"
+import { Tooltip } from 'react-tooltip';
 
 function Nav() {
 
@@ -33,10 +34,13 @@ function Nav() {
                     alt=""
                 />
 
-                <a className = "nav__download" href="NareshKumarKaushal_Resume.pdf" download="NareshKumarKaushal_Resume.pdf">
-                    <AiOutlineDownload/>
+                <a className = "nav__download" 
+                   href="NareshKumarKaushal_Resume.pdf" 
+                   download="NareshKumarKaushal_Resume.pdf">
+                    <AiOutlineDownload id = "nav__download" 
+                                       data-tooltip-content="Download Resume"/>
                 </a>
-
+                <Tooltip anchorId="nav__download" arrow/>
                 <img 
                     onClick={() => navigate("/profile")}
                     className='nav__avatar'

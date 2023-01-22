@@ -52,12 +52,10 @@ function Banner() {
                     <a href = "https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin/></a>
                 </div>
                 <AiFillHeart    id = "like__button" 
-                                data-tooltip-content="I like this Resume"
+                                data-tooltip-content={!like ? "I like this Resume" : "Rated"}
                                 className={`resume__likeDislike ${like ? "like" : "dislike"}`}
                                 onClick={() => changeLike(!like, user)}/>
-                {
-                    !like && <Tooltip anchorId="like__button" arrow/>
-                }
+                <Tooltip anchorId="like__button" arrow/>
             </div>
 
             <div className='banner--fadeButton'/>

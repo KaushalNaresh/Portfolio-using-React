@@ -29,7 +29,7 @@ function LoginScreen() {
             )
             : (
                 <>
-                    <h1>Welcome to Naresh's Personal space</h1>
+                    <h1>Welcome to Naresh's Personal Space</h1>
                     <h2>Want to know more about me!</h2>
                     <h3>Enter your email to start exploring</h3>
 
