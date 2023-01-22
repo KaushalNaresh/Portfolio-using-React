@@ -38,7 +38,7 @@ function SignUpScreen({email}) {
     <div className='signupScreen'>
         <form>
             <h1>Sign In</h1>
-            <input className={currEmail === email && email !== "" && "highlight"} ref={emailRef} placeholder='Email' type="email" value={currEmail} onChange={(e)=>setCurrEmail(e.target.value)}/>
+            <input className={currEmail === email && email !== "" ? "highlight" : ""} ref={emailRef} placeholder='Email' type="email" value={currEmail} onChange={(e)=>setCurrEmail(e.target.value)}/>
             <input ref={passwordRef} placeholder='Password' type="password"/>
             <button type='submit' onClick={signIn}>Sign In</button>
 

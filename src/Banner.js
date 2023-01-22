@@ -34,6 +34,18 @@ function Banner() {
         setLike(like);
     }
 
+    function getTotalLikeCount(){
+        let count = 0;
+        const db = getDatabase();
+        const usersRef = ref(db, 'users/');
+        onValue(usersRef, (snapshot) => {
+            snapshot.forEach((childSnapshot) => { 
+                count += childSnapshot.val().like;
+            });
+        });
+        return count;
+    }
+
     return (
         <header className='banner' 
         style={{
@@ -56,6 +68,7 @@ function Banner() {
                                 className={`resume__likeDislike ${like ? "like" : "dislike"}`}
                                 onClick={() => changeLike(!like, user)}/>
                 <Tooltip anchorId="like__button" arrow/>
+                <span className='like__count'>{user.email === "09naresh3@gmail.com" ? getTotalLikeCount()+" Likes" : ""}</span>
             </div>
 
             <div className='banner--fadeButton'/>

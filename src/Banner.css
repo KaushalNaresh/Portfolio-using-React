@@ -116,6 +116,13 @@
     border: none;
 }
 
+.like__count{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    font-size: 1.2rem;
+}
+
 .like{
     color: #e50914;
 }

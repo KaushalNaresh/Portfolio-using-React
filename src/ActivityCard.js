@@ -3,7 +3,6 @@ import './ActivityCard.css'
 import {BsPlayCircle} from "react-icons/bs"
 
 function ActivityCard({name, timeline, skills, description, logo, link}) {
-    console.log(description);
   return (
     
         <div className='activityCard'>
