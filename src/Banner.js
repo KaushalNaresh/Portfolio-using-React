@@ -16,14 +16,25 @@ function Banner() {
 
     useEffect(() => {
         const db = getDatabase();
-        const userRef = ref(db, "users/"+user.uid+"/like");
-
+        const userRef = ref(db, "users/"+user.uid);
         onValue(userRef, (snapshot) => {
-            const value = snapshot.val();
-            setLike(value);
+            if(snapshot.val() === null){
+                set(userRef, {
+                    email: user.email,
+                    like: false,
+                    comments: ""
+                });
+            }
+            else{
+                const likeRef = ref(db, "users/"+user.uid+"/like");
+                onValue(likeRef, (snapshot) => {
+                    const value = snapshot.val();
+                    setLike(value);
+                });
+            }
         });
 
-    },[user])
+    },[])
 
     function changeLike(like, user){
         const db = getDatabase();

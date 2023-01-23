@@ -1,0 +1,27 @@
+.comment__form__text{
+    background-color: #141414;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 2px solid #404040;
+    width: 90%;
+    font-size: 15px;
+}
+
+.comment__form{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    word-wrap: break-word;
+}
+
+.comment__form__sendButton{
+    font-size: 30px;
+    margin-left: auto;
+    color: #9e9c9c;
+    cursor: pointer;
+}
+
+.comment__form__sendButton:hover{
+    color: white;
+}

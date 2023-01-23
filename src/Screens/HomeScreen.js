@@ -4,6 +4,7 @@ import Nav from '../Nav'
 import Education from '../Education'
 import WorkExperience from '../WorkExperience'
 import Projects from '../Projects'
+import Comments from '../Comments'
 
 function HomeScreen() {
   return (
@@ -13,6 +14,7 @@ function HomeScreen() {
         <Education />
         <WorkExperience />
         <Projects/>
+        <Comments/>
     </div>
   )
 }
