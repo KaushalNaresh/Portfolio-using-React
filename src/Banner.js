@@ -22,7 +22,7 @@ function Banner() {
                 set(userRef, {
                     email: user.email,
                     like: false,
-                    comments: ""
+                    comments: "",
                 });
             }
             else{
@@ -38,11 +38,9 @@ function Banner() {
 
     function changeLike(like, user){
         const db = getDatabase();
-        const usersRef = ref(db, 'users/'+user.uid);
-        set(usersRef, {
-            email: user.email,
-            like: like
-        });
+        const likeRef = ref(db, 'users/'+user.uid+'/like');
+        set(likeRef, like
+        );
         setLike(like);
     }
 

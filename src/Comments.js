@@ -3,7 +3,7 @@ import './Comments.css';
 import {IoMdSend} from "react-icons/io";
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
-import { getDatabase, ref, set, push, onValue } from "firebase/database";
+import { getDatabase, ref, set, query, push, onValue, orderByChild } from "firebase/database";
 import CommentList from './CommentList';
 import * as Constants from './Constants';
 
@@ -22,15 +22,27 @@ function Comments() {
             let commtList = [];
             onValue(userRef, (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
-                    // console.log(childSnapshot.val().email);
                     const commts = childSnapshot.val().comments;
+                    // console.log(childSnapshot.key);
+                    // const qryRef = query(ref(db, 'users/' + childSnapshot.key+'/comments'), orderByChild('timestamp'));
                     if(commts.length !== 0){
-                        Object.keys(commts).forEach((key)=>{
-                            commtList.push(commts[key]);
+                        // console.log('users/' + childSnapshot.key+'/comments');
+                        const qryRef = query(ref(db, 'users/' + childSnapshot.key+'/comments'), orderByChild('timestamp'));
+                        onValue(qryRef, (commentSnapshot) => {
+                            commentSnapshot.forEach((childCommentSnapshot) => {
+                                commtList.push(childCommentSnapshot.val());
+                            });
+                            // commtList.push(commentSnapshot.val());
                         });
+                        // Object.keys(commts).forEach((key)=>{
+                        //     commtList.push(commts[key]);
+                        // });
                     }
                 });
                 setComments(commtList);
+                for(let i = 0; i < comments.length; i++){
+                    console.log(comments[i].timestamp);
+                }
             });
         }
         else{
@@ -55,7 +67,8 @@ function Comments() {
         const newCommentRef = push(commentListRef);
         set(newCommentRef, {
             postedBy: user.email,
-            text: commentText
+            text: commentText,
+            timestamp: Date.now()
         });
         setCommentText("");
         getComments();

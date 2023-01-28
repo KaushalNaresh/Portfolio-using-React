@@ -6,7 +6,7 @@ const CommentList = ({comments}) => (
         <h2 className='comment__list__heading'>Comments:</h2>
         <div className='comments'>
             {comments?.map((comment) => (
-                <div className="comment" key={comment.postedBy + " : " + comment.text}>
+                <div className="comment" key={comment.timestamp}>
                     <p>{comment.postedBy} : </p>
                     <p>&nbsp;{comment.text}</p>
                 </div>
