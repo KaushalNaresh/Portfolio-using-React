@@ -27,9 +27,10 @@ function Comments() {
                     // const qryRef = query(ref(db, 'users/' + childSnapshot.key+'/comments'), orderByChild('timestamp'));
                     if(commts.length !== 0){
                         // console.log('users/' + childSnapshot.key+'/comments');
-                        const qryRef = query(ref(db, 'users/' + childSnapshot.key+'/comments'), orderByChild('timestamp'));
+                        const qryRef = query(ref(db, 'users/'+childSnapshot.key+'/comments'), orderByChild('timestamp'));
                         onValue(qryRef, (commentSnapshot) => {
                             commentSnapshot.forEach((childCommentSnapshot) => {
+                                // console.log(childCommentSnapshot.val())
                                 commtList.push(childCommentSnapshot.val());
                             });
                             // commtList.push(commentSnapshot.val());
@@ -40,9 +41,9 @@ function Comments() {
                     }
                 });
                 setComments(commtList);
-                for(let i = 0; i < comments.length; i++){
-                    console.log(comments[i].timestamp);
-                }
+                // for(let i = 0; i < comments.length; i++){
+                //     console.log(comments[i].timestamp);
+                // }
             });
         }
         else{
