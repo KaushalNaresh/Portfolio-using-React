@@ -17,7 +17,10 @@ function SignUpScreen({email}) {
     ).then((authUser) => {
         console.log(authUser)
     }).catch(error => {
-        alert(error.message);
+        if(!passwordRef.current.value)
+            alert("Enter a password to signUp! ");
+        else
+            alert(error.message);
     });
   }
 
