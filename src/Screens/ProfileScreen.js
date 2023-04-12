@@ -18,7 +18,7 @@ function ProfileScreen() {
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                     alt=""
                 />
-            
+                
                 <div className='profileScreen__details'>
                     <h2>{user.email}</h2>
                     <div className='profileScreen__plans'>
