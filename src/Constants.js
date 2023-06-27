@@ -12,7 +12,21 @@ export const admin_email = "09naresh3@gmail.com";
 
 export const work_experiences = [
     {
-        name:"WOAS Technology Pvt. Ltd. (Wooqer)",
+        name:"Center for Mind and Brain",
+        role:"Graduate Student Researcher",
+        skills:"Signal Processing, Python, Machine Learning",
+        address:"Davis, California",
+        timeline:"Apr 2022 - Present",
+        website:"https://mindbrain.ucdavis.edu/",
+        description:{
+            "Silent Speech Interface":" Leading the ongoing development of a multimodal silent speech interface utilizing sEMG signals from facial muscle movements and recorded facial expressions to facilitate fluent speech production for individuals with speech disorders such as dysarthria.",
+            "":"Collaborated with the research team to select and implement a model architecture combining transformer and CNN based on a comprehensive literature review, to generate comprehensible speech from the collected data, focusing on enhancing phoneme accuracy by integrating visemes recorded through lip reading.",
+            "Real-time decoder":" Envisioned and proposed the future development of a real-time decoding system, with a focus on preserving prosody and naturalness in the synthesized voice output."
+        },
+        logo:"cmb"
+    },
+    {
+        name:"WOAS Technology Pvt. Ltd.",
         role:"Associate Product Engineer",
         skills:"Java, Spring Framework, JavaScript, CSS, MySQL, HTML",
         address:"Bangalore, India",
@@ -27,10 +41,10 @@ export const work_experiences = [
         logo:"wooqer"
     },
     {
-        name:"Planful (Host Analytics)",
+        name:"Planful",
         role:"Software Developer Engineer - 1 Intern",
         skills:"C#, MySQL, Git, Object Oriented Programming",
-        address:"Telangana, India",
+        address:"Hyderabad, India",
         timeline:"June 2020 – Dec 2020",
         website:"https://planful.com",
         description:{
@@ -129,13 +143,49 @@ export const work_experiences = [
 
 export const activities = [
     {
+        name: "Relevant Research Retrieval: Comparative Analysis of Machine Learning Models on CORD-19 Dataset",
+        timeline: "Mar 2022 - May 2022",
+        skills: "Python, Natural Language Processing, Machine Learning",
+        description: {
+            "Implemented":" Latent Dirichlet Allocation (LDA) model to retrieve relevant research articles based on a query from huge CORD-19 dataset.",
+            "Conducted": " preprocessing tasks on the dataset to prepare it for analysis, including text cleaning, tokenization, and vectorization.",
+            "Observed": " that while LDA effectively uncovered latent topics based on word co-occurrences, the models leveraging GloVe embeddings outperformed LDA by leveraging semantic meaning and contextual significance of words."
+        },
+        logo: "Covid",
+        link: "https://github.com/KaushalNaresh/COVID-19-Open-Research-Dataset-Challenge-CORD-19-"
+    },
+    {
+        name: "Portfolio",
+        timeline: "Dec 2022 - Jan 2023",
+        skills: "Java Script, React.js, Firebase, CSS",
+        description:{
+            "Designed":" a portfolio website with a look and feel of Netflix streaming platform",
+            "Demo": " https://resume-c79a2.web.app",
+            
+        },
+        logo:"Netflix",
+        link:"https://github.com/KaushalNaresh/netflix-build"
+    },
+    {
+        name: "Genre Classification using LSTM",
+        timeline: "Oct 2022 - Dec 2022",
+        skills: "Python, signal processing, LSTM, Keras, CNN",
+        description: {
+            "Implemented":" an LSTM-based model utilizing MFCCs and ZCR to extract deep features from famous music audio GTZAN dataset for genre classification.",
+            "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms because of its ability to remember past information of the cells.",
+            "Accuracy": " Achieved a testing accuracy of around 82% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
+        },
+        logo:"Genre",
+        link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
+    },
+    {
         name: "Omdena real world AI Project",
         timeline: "Nov 2021 - Jan 2022",
         skills: "Python, Keras, Audio Processing, Deep Learning",
         description:{
-            "Prompt":": Improve driver voice assistance technology using ML to help reduce road accidents.",
+            "Worked":" on a project to improve driver voice assistance technology using ML to help reduce road accidents.",
             "Spearheaded the pre-processing team" : " to develop a model for speech enhancement using U-Net or Convolutional-Autoencoders with skip connections.",
-            "Denoised" : " higher Sound to Noise ratio (SNR) audio files with significant lower word error rate."
+            "Denoised" : " higher Sound to Noise ratio (SNR) audio files with significant lower word error rate of around 40%."
         },
         logo:"Omdena",
         link:"https://github.com/KaushalNaresh/Speech_enhancement_using_convolutional_autoencoders"
@@ -151,32 +201,7 @@ export const activities = [
         },
         logo:"Btech",
         link:"https://github.com/KaushalNaresh/Genomics"
-    },
-    {
-        name: "Netflix-clone",
-        timeline: "Dec 2022 - Present",
-        skills: "Java Script, React.js, Firebase, Redux, CSS, Stripe",
-        description:{
-            "Implemented a clone": " of popular streaming platform Netflix using React.js",
-            "Included features": " like authentication using Firebase and buying a subscription plan using Stripe.",
-            "Demo": ": https://netflix-clone-991b6.web.app",
-            "":"Designed a react app for my resume with a look and feel of Netflix website https://resume-c79a2.web.app"
-        },
-        logo:"Netflix",
-        link:"https://github.com/KaushalNaresh/netflix-build"
-    },
-    {
-        name: "Genre Classification using LSTM",
-        timeline: "Oct 2022 - Dec 2022",
-        skills: "Python, signal processing, LSTM, Keras, CNN",
-        description: {
-            "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-            "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-            "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-        },
-        logo:"Genre",
-        link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    },
+    }
     // {
     //     name: "Genre Classification using LSTM",
     //     timeline: "Oct 2022 - Dec 2022",

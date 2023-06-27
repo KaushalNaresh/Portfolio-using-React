@@ -82,6 +82,7 @@
     display: flex;
     opacity: 0;
     transition: 0.3s;
+    font-size: 50px;
 }
 
 .activityCard__playButton:hover{
@@ -91,4 +92,49 @@
 .activityCard__info li span{
     font-weight: 800;
     color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .activityCard{
+        max-width: 48%;
+    }
+    .activityCard__name{
+        font-size: 15px;
+    }
+    .activityCard__timeline{
+        font-size: 12px;
+    }
+    .activityCard__skills{
+        font-size: 12px;
+    }
+    .activityCard__info{
+        font-size: 12px;
+    }
+    .activityCard__playButton{
+        opacity: 1;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 812px) {
+    .activityCard{
+        max-width: 100%;
+    }
+    .activityCard__name{
+        font-size: 11px;
+    }
+    .activityCard__timeline{
+        font-size: 11px;
+    }
+    .activityCard__skills{
+        font-size: 11px;
+    }
+    .activityCard__info{
+        font-size: 11px;
+    }
+    .activityCard__playButton{
+        opacity: 1;
+        font-size: 25px;
+    }
 }

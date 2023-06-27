@@ -11,7 +11,7 @@ function ActivityCard({name, timeline, skills, description, logo, link}) {
                     backgroundImage: `url(${logo})`
                 }}>
                     <div className='activityCard__shade'></div>
-                    <div className='activityCard__playButton'><BsPlayCircle color='white' size={50}/></div>
+                    <div className='activityCard__playButton'><BsPlayCircle color='white'/></div>
                 </div>
             </a>
             <div className='activityCard__description'>

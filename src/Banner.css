@@ -6,7 +6,7 @@
 }
 
 .banner__contents{
-    margin-left: 100px;
+    margin-left: 5%;
     padding-top: 140px;
     height: 190px;
 }
@@ -36,7 +36,8 @@
     border-right: .05em solid white;
     margin: 0 auto 0 0;
     white-space: nowrap;
-    width: 72%;
+    max-width: 95%;
+    word-wrap: break-word;
     animation: 
         typing 4s steps(35, end),
         blink-caret 0.4s step-end infinite;
@@ -51,7 +52,7 @@
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
-    to { width: 72% }
+    to { width: 95% }
 }
 
 /* The typewriter cursor effect */
@@ -83,6 +84,8 @@
 
 .banner__buttons{
     margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .banner__button{
@@ -90,7 +93,7 @@
     color: black;
     outline: none;
     border: none;
-    font-weight: 700;
+    /* font-weight: 500; */
     border-radius: 0.2vw;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -98,12 +101,43 @@
     padding-top: 0.5rem;
     background-color: white;
     padding-bottom: 0.5rem;
+    text-align: center;
+    width: 15px;
 }
 
 .banner__button:hover{
     color: white;
     background-color: rgba(51,51,51,0.5);
     transition: all 0.2s;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .banner__title {
+      font-size: 3rem; /* Adjust the font-size value as needed */
+    }
+    .banner__title > span{
+        font-size: 1.25rem;
+    }
+    .banner__button{
+        width: 20px;
+        /* padding-left: 1.5rem;
+        padding-right: 1.5rem; */
+    }
+  }
+
+@media (max-width: 812px) {
+    .banner__title {
+        font-size: 1.5rem; /* Adjust the font-size value as needed */
+    }
+    .banner__title > span{
+        font-size: 1rem;
+    }
+    .banner__button{
+        width: 15px;
+        /* padding-left: 1.0rem;
+        padding-right: 1.0rem; */
+    }
 }
 
 .resume__likeDislike{

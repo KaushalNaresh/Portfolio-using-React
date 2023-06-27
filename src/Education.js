@@ -9,10 +9,10 @@ function Education() {
         <div className='education__contents'>
 
             <div className='education__header'>
-                <span>Education </span><span>UC Davis 2022</span> | <span>IIT Goa 2017</span> &nbsp;<FaGraduationCap size={20} color='white'/>
+                <span>Education </span> &nbsp;<FaGraduationCap size={20} color='white'/>
             </div>
 
-            <div className='education__chronology'>
+            {/* <div className='education__chronology'>
 
                 <div className='education one'>
                     <div className='education__details'>
@@ -42,7 +42,38 @@ function Education() {
                     </div>
                 </div>
 
+            </div> */}
+
+            <div className='education__chronology'>
+                <div className='education'>
+                    <div className='education__details'>
+                    <div className='education__info'>
+                        <h1>University Of California Davis</h1>
+                        <span>{Constants.ucdavis_degree_and_gpa}</span>
+                        <span>{Constants.ucdavis_description}</span>
+                    </div>
+                    <div className='education__timeline'>
+                        <div>{Constants.ucdavis_address}</div> 
+                        <div>{Constants.ucdavis_timeline}</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div className='education'>
+                    <div className='education__details'>
+                    <div className='education__info'>
+                        <h1>Indian Institute Of Technology Goa</h1>
+                        <span>{Constants.iitgoa_degree_and_gpa}</span>
+                        <span>{Constants.iitgoa_description}</span>
+                    </div>
+                    <div className='education__timeline'>
+                        <div>{Constants.iitgoa_address}</div> 
+                        <div>{Constants.iitgoa_timeline}</div>
+                    </div>
+                    </div>
+                </div>
             </div>
+
             
         </div>
     </div>

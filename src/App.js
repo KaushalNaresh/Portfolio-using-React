@@ -10,36 +10,49 @@ import ProfileScreen from './Screens/ProfileScreen';
 
 function App() {
 
-  const user = useSelector(selectUser);
-  const dispatch = useDispatch();
+  // const user = useSelector(selectUser);
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    auth.onAuthStateChanged(userAuth => {
-      if(userAuth){
-        dispatch(login({
-          uid: userAuth.uid,
-          email: userAuth.email,
-        }))
-      }
-      else{
-        dispatch(logout());
-      }
-    });
+  // useEffect(() => {
+  //   auth.onAuthStateChanged(userAuth => {
+  //     if(userAuth){
+  //       dispatch(login({
+  //         uid: userAuth.uid,
+  //         email: userAuth.email,
+  //       }))
+  //     }
+  //     else{
+  //       dispatch(logout());
+  //     }
+  //   });
 
-  }, [dispatch])
+  // }, [dispatch])
 
+  // return (
+  //   <div className="App">
+  //     <Router>
+  //       { !user ? (
+  //             <LoginScreen/>
+  //           ) : (
+  //             <Routes>
+  //               {/* <Route path = "/profile" element = { <ProfileScreen/>}/> */}
+  //               <Route exact path="/" element = {<HomeScreen />}/>
+  //               <Route exact path="/profile" element = {<ProfileScreen />}/>
+  //             </Routes>
+  //           )
+  //       }
+  //     </Router>
+  //   </div>
+  // );
   return (
     <div className="App">
       <Router>
-        { !user ? (
-              <LoginScreen/>
-            ) : (
-              <Routes>
-                {/* <Route path = "/profile" element = { <ProfileScreen/>}/> */}
-                <Route exact path="/" element = {<HomeScreen />}/>
-                <Route exact path="/profile" element = {<ProfileScreen />}/>
-              </Routes>
-            )
+        { 
+          <Routes>
+            {/* <Route path = "/profile" element = { <ProfileScreen/>}/> */}
+            <Route exact path="/" element = {<HomeScreen />}/>
+            <Route exact path="/profile" element = {<ProfileScreen />}/>
+          </Routes>
         }
       </Router>
     </div>

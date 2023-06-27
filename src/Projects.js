@@ -6,6 +6,7 @@ import Omdena from './images/Omdena.gif';
 import Netflix from './images/Netflix.gif';
 import Btech from './images/Btech.gif';
 import Genre from './images/Genre.gif';
+import Covid from './images/covid.gif';
 import { useState } from 'react';
 import {IoIosArrowDropdown, IoIosArrowDropup} from "react-icons/io";
 
@@ -17,7 +18,8 @@ function Projects() {
   const logos = {'Omdena': Omdena,
                  'Btech': Btech,
                  'Netflix': Netflix,
-                 'Genre': Genre};
+                 'Genre': Genre,
+                 'Covid': Covid};
   return (
     <div className='projects'>
         <h1>Projects</h1>
@@ -38,27 +40,13 @@ function Projects() {
             Constants.activities.length > 3 && Constants.activities.length > numOfCardVis 
             ?    <>
                     <div className='projects__showMore__button' onClick={() => setNumOfCardVis(numOfCardVis+cardPerRow)}>
-                                                        <IoIosArrowDropdown style={{
-                                                                            position:'absolute',
-                                                                            left:0,
-                                                                            right:0,
-                                                                            margin: '0 auto',
-                                                                            bottom: '1.5em',
-                                                                            zIndex:'2'
-                                                        }}/>
+                                                        <IoIosArrowDropdown className='projects__showMore' />
                     </div> 
                     <div className='projects--fadeButton'/>
                 </>
                 : Constants.activities.length > 3 && Constants.activities.length <= numOfCardVis 
                 ?   <div className='projects__showMore__button' onClick={() => setNumOfCardVis(cardPerRow)}>
-                        <IoIosArrowDropup style={{
-                                            position:'absolute',
-                                            left:0,
-                                            right:0,
-                                            margin: '0 auto',
-                                            bottom: '1.5em',
-                                            zIndex:'2'
-                        }}/>
+                        <IoIosArrowDropup className='projects__showMore' />
                     </div> 
                 : <></>
         }

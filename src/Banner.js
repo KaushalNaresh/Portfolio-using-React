@@ -11,50 +11,50 @@ import  * as Constants from "./Constants";
 
 function Banner() {
 
-    const [like, setLike] = useState(false);
-    const user = useSelector(selectUser);
+    // const [like, setLike] = useState(false);
+    // const user = useSelector(selectUser);
 
-    useEffect(() => {
-        const db = getDatabase();
-        const userRef = ref(db, "users/"+user.uid);
-        onValue(userRef, (snapshot) => {
-            if(snapshot.val() === null){
-                set(userRef, {
-                    email: user.email,
-                    like: false,
-                    comments: "",
-                });
-            }
-            else{
-                const likeRef = ref(db, "users/"+user.uid+"/like");
-                onValue(likeRef, (snapshot) => {
-                    const value = snapshot.val();
-                    setLike(value);
-                });
-            }
-        });
+    // useEffect(() => {
+    //     const db = getDatabase();
+    //     const userRef = ref(db, "users/"+user.uid);
+    //     onValue(userRef, (snapshot) => {
+    //         if(snapshot.val() === null){
+    //             set(userRef, {
+    //                 email: user.email,
+    //                 like: false,
+    //                 comments: "",
+    //             });
+    //         }
+    //         else{
+    //             const likeRef = ref(db, "users/"+user.uid+"/like");
+    //             onValue(likeRef, (snapshot) => {
+    //                 const value = snapshot.val();
+    //                 setLike(value);
+    //             });
+    //         }
+    //     });
 
-    },[])
+    // },[])
 
-    function changeLike(like, user){
-        const db = getDatabase();
-        const likeRef = ref(db, 'users/'+user.uid+'/like');
-        set(likeRef, like
-        );
-        setLike(like);
-    }
+    // function changeLike(like, user){
+    //     const db = getDatabase();
+    //     const likeRef = ref(db, 'users/'+user.uid+'/like');
+    //     set(likeRef, like
+    //     );
+    //     setLike(like);
+    // }
 
-    function getTotalLikeCount(){
-        let count = 0;
-        const db = getDatabase();
-        const usersRef = ref(db, 'users/');
-        onValue(usersRef, (snapshot) => {
-            snapshot.forEach((childSnapshot) => { 
-                count += childSnapshot.val().like;
-            });
-        });
-        return count;
-    }
+    // function getTotalLikeCount(){
+    //     let count = 0;
+    //     const db = getDatabase();
+    //     const usersRef = ref(db, 'users/');
+    //     onValue(usersRef, (snapshot) => {
+    //         snapshot.forEach((childSnapshot) => { 
+    //             count += childSnapshot.val().like;
+    //         });
+    //     });
+    //     return count;
+    // }
 
     return (
         <header className='banner' 
@@ -73,12 +73,12 @@ function Banner() {
                     <a href = "https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub/></a>
                     <a href = "https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin/></a>
                 </div>
-                <AiFillHeart    id = "like__button" 
+                {/* <AiFillHeart    id = "like__button" 
                                 data-tooltip-content={!like ? "I like this Resume" : "Rated"}
                                 className={`resume__likeDislike ${like ? "like" : "dislike"}`}
                                 onClick={() => changeLike(!like, user)}/>
-                <Tooltip anchorId="like__button" arrow/>
-                <span className='like__count'>{user.email === Constants.admin_email ? getTotalLikeCount()+" Likes" : ""}</span>
+                <Tooltip anchorId="like__button" arrow/> */}
+                {/* <span className='like__count'>{user.email === Constants.admin_email ? getTotalLikeCount()+" Likes" : ""}</span> */}
             </div>
 
             <div className='banner--fadeButton'/>

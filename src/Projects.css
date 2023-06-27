@@ -1,12 +1,12 @@
 .projects{
-    margin: 0 100px;
+    margin: 0 5%;
     position: relative;
     padding-bottom: 100px;
 }
 
 .projects > h1{
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 25px;
     padding: 0 0 20px 0;
 }
@@ -16,12 +16,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid #404040;
+    flex-direction: row;
 }
 
 .projects__showMore__button{
     cursor: pointer;
     color:#9e9c9c;
     font-size: 50px;
+    /* margin-bottom: 40px; */
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 2; */
+}
+
+.projects__showMore{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 1.5em;
+    z-index: 3;
 }
 
 .dropdown__button{
@@ -40,8 +57,32 @@
         180deg, 
         transparent,
         rgba(37,37,37,0.61),
-        #141414
+        #111
     );
     z-index: 1;
     width: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .projects > h1{
+        font-size: 18px;
+    }
+    .projects__showMore{
+        font-size: 25px;
+        margin-bottom: 2.0em;
+    }
+}
+
+@media (max-width: 812px) {
+    .projects > h1{
+        font-size: 15px;
+    }
+    .projects__row{
+        flex-direction: column;
+    }
+    .projects__showMore{
+        font-size: 15px;
+        margin-bottom: 4.6em;
+    }
 }

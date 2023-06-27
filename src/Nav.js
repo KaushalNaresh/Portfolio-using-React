@@ -27,26 +27,28 @@ function Nav() {
     return (
         <div className={`nav ${show && "nav__black"}`}>
             <div className='nav__contents'>
-                <img 
+                {/* <img 
                     onClick={() => navigate('/')}
                     className='nav__logo'
                     src={logo}
                     alt=""
-                />
+                /> */}
 
                 <a className = "nav__download" 
+                   id="nav__download__id"
                    href="NareshKumarKaushal_Resume.pdf" 
                    download="NareshKumarKaushal_Resume.pdf">
                     <AiOutlineDownload id = "nav__download" 
                                        data-tooltip-content="Download Resume"/>
+                    <span>Download Resume</span>
                 </a>
                 <Tooltip anchorId="nav__download" arrow/>
-                <img 
+                {/* <img 
                     onClick={() => navigate("/profile")}
                     className='nav__avatar'
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                     alt=""
-                />
+                /> */}
             </div>
         </div>
     )

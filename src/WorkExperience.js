@@ -4,6 +4,7 @@ import * as Constants from './Constants'
 import WorkExRow from './WorkExRow'
 import wooqer_logo from "./images/wooqer_logo_transparent.png";
 import planful_logo from "./images/planful_logo_transparent.png";
+import cmb_logo from "./images/cmb.jpeg";
 import {IoIosArrowDropdown, IoIosArrowDropup} from "react-icons/io";
 
 function WorkExperience() {
@@ -13,7 +14,8 @@ function WorkExperience() {
 
   const logos = {
     "wooqer": wooqer_logo,
-    "planful": planful_logo
+    "planful": planful_logo,
+    "cmb": cmb_logo
   }
 
   return (
@@ -39,27 +41,13 @@ function WorkExperience() {
             Constants.work_experiences.length > workExCount && Constants.work_experiences.length > numOfVisWorkEx 
             ?    <>
                     <div className='work__experience__showMore__button' onClick={() => setnumOfVisWorkEx(numOfVisWorkEx+workExCount)}>
-                                                    <IoIosArrowDropdown style={{
-                                                                        position:'absolute',
-                                                                        left:0,
-                                                                        right:0,
-                                                                        margin: '0 auto',
-                                                                        bottom: '0.6em',
-                                                                        zIndex:'2'
-                                                    }}/>
+                                                    <IoIosArrowDropdown className = "work__experience__showMore"/>
                     </div> 
                     <div className='WorkEx--fadeButton'/>
                 </>
-                : Constants.work_experiences.length > 3 && Constants.work_experiences.length <= numOfVisWorkEx 
+                : Constants.work_experiences.length > 2 && Constants.work_experiences.length <= numOfVisWorkEx 
                 ?   <div className='work__experience__showMore__button' onClick={() => setnumOfVisWorkEx(workExCount)}>
-                        <IoIosArrowDropup style={{
-                                            position:'absolute',
-                                            left:0,
-                                            right:0,
-                                            margin: '0 auto',
-                                            bottom: '0.6em',
-                                            zIndex:'2'
-                        }}/>
+                        <IoIosArrowDropup className = "work__experience__showMore" />
                     </div> 
                 : <></>
         }

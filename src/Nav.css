@@ -21,11 +21,32 @@
     color: #9e9c9c;
     font-size: 35px;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* font-weight: bold; */
+}
+
+#nav__download__id{
+    text-decoration: none;
+}
+
+.nav__download > span{
+    font-size: 12px;
+    color: #9e9c9c;
+    display: none;
+    align-self: center;
+    padding-left: 5px;
+}
+
+.nav__download > span:hover{
+    color: white;
 }
 
 #nav__download{
     border: none;
     outline: none;
+    font-weight: bold;
 }
 
 .nav__download:hover{
@@ -52,4 +73,24 @@
     right: 20px;
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 1024px) {
+    .nav__download > span{
+        display: flex;
+    }
+    .nav__download{
+        right: 25px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 812px) {
+    .nav__download > span{
+        display: flex;
+    }
+    .nav__download{
+        right: 25px;
+        font-size: 30px;
+    }
 }
