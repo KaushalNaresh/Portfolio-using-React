@@ -55,7 +55,7 @@ function Banner() {
     //     });
     //     return count;
     // }
-
+    /*https://tinyurl.com/mrh4jpe5*/ 
     return (
         <header className='banner' 
         style={{

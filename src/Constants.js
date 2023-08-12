@@ -1,5 +1,5 @@
-export const ucdavis_description = "Working as part-time graduate teaching assistant for General Chemistry laboratory";
-export const ucdavis_degree_and_gpa = "Masters in Computer Science, GPA: 4";
+export const ucdavis_description = "Working as part-time graduate student researcher under Prof. Lee Miller in Nueroscience department at Center for Mind and Brain.";
+export const ucdavis_degree_and_gpa = "Masters in Computer Science, GPA: 3.9";
 export const ucdavis_timeline = "Sept 2022–May 2024";
 export const ucdavis_address = "Davis, California";
 
@@ -17,11 +17,11 @@ export const work_experiences = [
         skills:"Signal Processing, Python, Machine Learning",
         address:"Davis, California",
         timeline:"Apr 2022 - Present",
-        website:"https://mindbrain.ucdavis.edu/",
+        website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Leading the ongoing development of a multimodal silent speech interface utilizing sEMG signals from facial muscle movements and recorded facial expressions to facilitate fluent speech production for individuals with speech disorders such as dysarthria.",
-            "":"Collaborated with the research team to select and implement a model architecture combining transformer and CNN based on a comprehensive literature review, to generate comprehensible speech from the collected data, focusing on enhancing phoneme accuracy by integrating visemes recorded through lip reading.",
-            "Real-time decoder":" Envisioned and proposed the future development of a real-time decoding system, with a focus on preserving prosody and naturalness in the synthesized voice output."
+            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain to develop a non-invasive silent speech interface for patients with Dyarthria.",
+            "":"Conducted literature review and analysis of existing models for silent speech interfaces to identify key challenges and opportunities for improvement.",
+            "Initial results":" Achieved promising initial results of clustering phonemes from sEMG signals and exploring machine-learning and geometric deep-learning techniques to generate coherent speech and preserving prosody."
         },
         logo:"cmb"
     },
@@ -144,7 +144,7 @@ export const work_experiences = [
 export const activities = [
     {
         name: "Relevant Research Retrieval: Comparative Analysis of Machine Learning Models on CORD-19 Dataset",
-        timeline: "Mar 2022 - May 2022",
+        timeline: "Mar 2023 - May 2023",
         skills: "Python, Natural Language Processing, Machine Learning",
         description: {
             "Implemented":" Latent Dirichlet Allocation (LDA) model to retrieve relevant research articles based on a query from huge CORD-19 dataset.",
@@ -160,7 +160,7 @@ export const activities = [
         skills: "Java Script, React.js, Firebase, CSS",
         description:{
             "Designed":" a portfolio website with a look and feel of Netflix streaming platform",
-            "Demo": " https://resume-c79a2.web.app",
+            "Link": " https://resume-c79a2.web.app",
             
         },
         logo:"Netflix",
