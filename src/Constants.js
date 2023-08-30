@@ -14,14 +14,14 @@ export const work_experiences = [
     {
         name:"Center for Mind and Brain",
         role:"Graduate Student Researcher",
-        skills:"Signal Processing, Python, Machine Learning",
+        skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
         address:"Davis, California",
         timeline:"Apr 2022 - Present",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain to develop a non-invasive silent speech interface for patients with Dyarthria.",
-            "":"Conducted literature review and analysis of existing models for silent speech interfaces to identify key challenges and opportunities for improvement.",
-            "Initial results":" Achieved promising initial results of clustering phonemes from sEMG signals and exploring machine-learning and geometric deep-learning techniques to generate coherent speech and preserving prosody."
+            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain to develop a non-invasive multimodal silent speech interface (SSI) using sEMG signals for patients with Dyarthria.",
+            "":"Executed a multimodal strategy involving sEMG signals, audio, and video to proficiently cluster 39 phonemes, yielding promising initial results with an approximate accuracy of 85%.",
+            "Literature review":" Conducted extensive literature review in SSI to uncover challenges and opportunities. Exploring self-supervised techniques for label-free learning and direct sEMG-to-voice conversion, preserving prosody and essential features."
         },
         logo:"cmb"
     },
@@ -33,10 +33,10 @@ export const work_experiences = [
         timeline:"Jun 2021 – Apr 2022",
         website:"https://wooqer.com",
         description:{
-            "Gallery for better Visual Experience":"Spearheaded the project of designing a gallery with the feature of giving contextual feedback on images and send context based notifications.",
-            "":"Aided Lenskart and various other retail stores in their visual merchandising implementation using this new features of gallery and brought an increment of 45% in customer engagement.",
-            "Mobile Refresh Project": "Contributed as back-end developer to improve Wooqer (Android and iOS) app by designing new API’s and optimizing existing ones and to make it more dynamic and efficient.",
-            "Debugging":"Contributed in resolving product related errors faced by customers by working with customer success and quality assurance team."
+            "Gallery for better Visual Experience":"Spearheaded the project to design an interactive gallery with the feature of providing contextual feedback on images and sending context-based notifications.",
+            "":"Improved customer engagement by 45% through the implementation of new visual merchandising features in the gallery, benefiting Lenskart and other retail stores.",
+            "Mobile Refresh Project": "Revamped Wooqer mobile app (Android and iOS) as a back-end developer by designing new APIs and optimizing existing ones. This effort led to a marked increase in app responsiveness and efficiency, resulting in a notable 25% reduction in critical response times.",
+            "Debugging":"Resolved product-related errors faced by customers in collaboration with the customer success and quality assurance teams."
         },
         logo:"wooqer"
     },
@@ -48,9 +48,9 @@ export const work_experiences = [
         timeline:"June 2020 – Dec 2020",
         website:"https://planful.com",
         description:{
-            "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-            "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-            "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
+            "Data quality assessment tool": "Created a data quality assessment tool to identify anomalies in financial data, assign quality scores, and offer valuable insights and predictions to customers.",
+            "":"Utilized the tool to detect sparse datasets, significant fluctuations, and inconsistent values, leading to a 40% reduction in data-related errors and improved predictive model accuracy.",
+            "Debugging":"Collaborated on debugging and testing initiatives, swiftly resolving pending issues on JIRA, documenting code, and providing guidance to onboard new team members."
         },
         logo:"planful"
     },
