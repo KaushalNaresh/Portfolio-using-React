@@ -164,7 +164,7 @@ export const activities = [
             
         },
         logo:"Netflix",
-        link:"https://github.com/KaushalNaresh/netflix-build"
+        link:"https://github.com/KaushalNaresh/naresh-kumar-kaushal-resume"
     },
     {
         name: "Genre Classification using LSTM",
