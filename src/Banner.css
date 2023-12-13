@@ -1,16 +1,3 @@
-.banner{
-    height: 448px;
-    position: relative;
-    color: white;
-    object-fit: contain;
-}
-
-.banner__contents{
-    margin-left: 5%;
-    padding-top: 140px;
-    height: 190px;
-}
-
 @font-face {
     font-family: 'Netflix Sans Bold';
     src: url('./fonts/NetflixSansBold.otf') format('otf');
@@ -26,6 +13,19 @@
     src: url('./fonts/NetflixSansMedium.otf') format('otf');
 }
 
+.banner{
+    height: 448px;
+    position: relative;
+    color: white;
+    object-fit: contain;
+}
+
+.banner__contents{
+    margin-left: 5%;
+    padding-top: 140px;
+    height: 190px;
+}
+
 .banner__title{
     font-family: 'Netflix Sans Bold';
     font-size: 4rem;
@@ -33,14 +33,11 @@
     padding-bottom: 0.3rem;
     letter-spacing: .05em;
     overflow: hidden;
-    border-right: .05em solid white;
+    /* border-right: .05em solid white; */
     margin: 0 auto 0 0;
     white-space: nowrap;
     max-width: 95%;
     word-wrap: break-word;
-    animation: 
-        typing 4s steps(35, end),
-        blink-caret 0.4s step-end infinite;
 }
 
 .banner__title > span{
@@ -48,18 +45,6 @@
     font-weight: 0;
     color: rgb(223, 221, 221);
 }
-
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 95% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
-  }
 
 .banner__description{
     font-family: 'Netflix Sans Light';
@@ -95,20 +80,27 @@
     border: none;
     /* font-weight: 500; */
     border-radius: 0.2vw;
-    padding-left: 2rem;
+    /* padding-left: 2rem;
     padding-right: 2rem;
     margin-right: 1rem;
-    padding-top: 0.5rem;
+    padding-top: 0.5rem; */
     background-color: white;
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
     text-align: center;
-    width: 15px;
+    width: 5rem;
+    height: 2rem;
+    margin-right: 1rem;;
+    transition: transform 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner__button:hover{
     color: white;
     background-color: rgba(51,51,51,0.5);
     transition: all 0.2s;
+    transform: scale(1.1);
 }
 
 /* Media query for smaller screens */
@@ -120,27 +112,52 @@
         font-size: 1.25rem;
     }
     .banner__button{
-        width: 20px;
-        /* padding-left: 1.5rem;
-        padding-right: 1.5rem; */
+        width: 4rem;
+        height: 2rem;
     }
+    .banner__profilePhoto {
+        width: 20vw;
+        height: 30vw;
+      }
   }
 
 @media (max-width: 812px) {
     .banner__title {
-        font-size: 1.5rem; /* Adjust the font-size value as needed */
+        font-size: 1.25rem; /* Adjust the font-size value as needed */
     }
     .banner__title > span{
         font-size: 1rem;
     }
     .banner__button{
-        width: 15px;
+        width: 4rem;
+        height: 2rem;
         /* padding-left: 1.0rem;
         padding-right: 1.0rem; */
     }
+    .banner__profilePhoto {
+        width: 8vw; /* Adjust the size based on the width of the viewport */
+        height: 12vw; /* This maintains the oval shape */
+      }
 }
 
-.resume__likeDislike{
+.banner__profilePhoto {
+    position: absolute;
+    right: 10%; /* Adjust the value as needed */
+    top: 40%;
+    transform: translateY(-50%); /* This will vertically center your photo */
+    border-radius: 50%; /* This makes the photo oval or circular based on the aspect ratio */
+    overflow: hidden; /* This ensures that the photo doesn't overflow from the rounded corners */
+    width: 15vw; /* Adjust width as needed */
+    height: 18vw; /* Adjust height for an oval shape */
+}
+
+.banner__profilePhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures that the image covers the div and no stretching occurs */
+}
+
+/* .resume__likeDislike{
     position: absolute;
     right: 0;
     margin-right: 100px;
@@ -168,4 +185,23 @@
 .resume__likeDislike:hover{
     color: #e50914;
     transition: all 0.2s;
+} */
+
+/* 
+.banner__button {
+    transition: transform 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   
+} */
+  
+@keyframes floating {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+
+.banner__download {
+animation: floating 3s ease-in-out infinite;
 }

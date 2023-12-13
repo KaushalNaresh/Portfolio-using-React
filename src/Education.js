@@ -45,7 +45,7 @@ function Education() {
             </div> */}
 
             <div className='education__chronology'>
-                <div className='education'>
+                <div className='education__card'>
                     <div className='education__details'>
                     <div className='education__info'>
                         <h1>University Of California Davis</h1>
@@ -59,7 +59,7 @@ function Education() {
                     </div>
                 </div>
 
-                <div className='education'>
+                <div className='education__card'>
                     <div className='education__details'>
                     <div className='education__info'>
                         <h1>Indian Institute Of Technology Goa</h1>

@@ -49,11 +49,28 @@
     color: white;
 }
 
-.education {
+.education{
     display: flex;
     flex-direction: column;
     /* background-color: #f2f2f2; */
     padding: 10px 0px;
+}
+
+.education__card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+  
+.education__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(100, 98, 98, 0.15);
 }
 
 .education__details{

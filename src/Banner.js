@@ -1,89 +1,47 @@
-// import axios from './axios';
-import React, {useEffect, useState} from 'react'
-import './Banner.css'
-import { AiFillHeart, AiFillGithub, AiFillLinkedin} from "react-icons/ai";
+import React from 'react';
+import './Banner.css';
 import { MdEmail } from "react-icons/md";
-import { Tooltip } from 'react-tooltip'
-import { getDatabase, ref, set, onValue } from "firebase/database";
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
-import  * as Constants from "./Constants";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import useTypewriter from 'react-typewriter-hook';
+import profilePhoto from './images/personal_headshot.jpg'
+import { useState, useEffect } from 'react';
+import Typewriter from 'typewriter-effect';
 
 function Banner() {
+    const name = "Naresh Kumar Kaushal";
 
-    // const [like, setLike] = useState(false);
-    // const user = useSelector(selectUser);
-
-    // useEffect(() => {
-    //     const db = getDatabase();
-    //     const userRef = ref(db, "users/"+user.uid);
-    //     onValue(userRef, (snapshot) => {
-    //         if(snapshot.val() === null){
-    //             set(userRef, {
-    //                 email: user.email,
-    //                 like: false,
-    //                 comments: "",
-    //             });
-    //         }
-    //         else{
-    //             const likeRef = ref(db, "users/"+user.uid+"/like");
-    //             onValue(likeRef, (snapshot) => {
-    //                 const value = snapshot.val();
-    //                 setLike(value);
-    //             });
-    //         }
-    //     });
-
-    // },[])
-
-    // function changeLike(like, user){
-    //     const db = getDatabase();
-    //     const likeRef = ref(db, 'users/'+user.uid+'/like');
-    //     set(likeRef, like
-    //     );
-    //     setLike(like);
-    // }
-
-    // function getTotalLikeCount(){
-    //     let count = 0;
-    //     const db = getDatabase();
-    //     const usersRef = ref(db, 'users/');
-    //     onValue(usersRef, (snapshot) => {
-    //         snapshot.forEach((childSnapshot) => { 
-    //             count += childSnapshot.val().like;
-    //         });
-    //     });
-    //     return count;
-    // }
-    /*https://tinyurl.com/mrh4jpe5*/ 
     return (
-        <header className='banner' 
-        style={{
-            backgroundSize: "cover",
-            backgroundImage: `url(https://tinyurl.com/mrh4jpe5)`,
-            backgroundPosition: "center center",
-        }}>
-            
+        <header className='banner'
+            style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(https://tinyurl.com/mrh4jpe5)`,
+                backgroundPosition: "center center",
+            }}>
+
             <div className='banner__contents'>
                 <h1 className="banner__title">
-                    Naresh Kumar Kaushal <span>(he/him)</span>
+                    <div>
+                        <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString('Naresh Kumar Kaushal').start();
+                        }}
+                        />
+                    </div>
+                    <span>(he/him)</span>
                 </h1>
-                <div className='banner__buttons'>   
-                    <a href = "mailto:nkkaushal@ucdavis.edu" className='banner__button'><MdEmail/></a>
-                    <a href = "https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub/></a>
-                    <a href = "https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin/></a>
+                <div className='banner__buttons'>
+                    <a href="mailto:nkkaushal@ucdavis.edu" className='banner__button'><MdEmail /></a>
+                    <a href="https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub /></a>
+                    <a href="https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin /></a>
                 </div>
-                {/* <AiFillHeart    id = "like__button" 
-                                data-tooltip-content={!like ? "I like this Resume" : "Rated"}
-                                className={`resume__likeDislike ${like ? "like" : "dislike"}`}
-                                onClick={() => changeLike(!like, user)}/>
-                <Tooltip anchorId="like__button" arrow/> */}
-                {/* <span className='like__count'>{user.email === Constants.admin_email ? getTotalLikeCount()+" Likes" : ""}</span> */}
+                <div className='banner__profilePhoto'>
+                    <img src={profilePhoto} alt="Profile" />
+                </div>
             </div>
 
-            <div className='banner--fadeButton'/>
+            <div className='banner--fadeButton' />
         </header>
-  )
+    );
 }
 
-export default Banner
+export default Banner;
