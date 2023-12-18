@@ -26,18 +26,12 @@ function Nav() {
 
     return (
         <div className={`nav ${show && "nav__black"}`} id='nav'>
-                {/* <img 
-                    onClick={() => navigate('/')}
-                    className='nav__logo'
-                    src={logo}
-                    alt=""
-                /> */}
                 <div className = "nav__hyperlinks">
                     <a href = "#nav">Home</a>
                     <a href = "#education">Education</a>
                     <a href = "#work__experience">Work Experience</a>
                     <a href = "#projects">Projects</a>
-                    <a href = "">Message Me!</a>
+                    {/* <a href = "">Message Me!</a> */}
                 </div>
                 <div className = "nav__buttons">
                     <a className = "nav__download" 

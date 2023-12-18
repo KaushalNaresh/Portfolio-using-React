@@ -14,7 +14,7 @@ function HomeScreen() {
         <Education />
         <WorkExperience />
         <Projects/>
-        <ContactMe />
+        {/* <ContactMe /> */}
         {/* <Comments/> */}
     </div>
   )

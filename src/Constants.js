@@ -169,6 +169,18 @@ export const work_experiences = [
 
 export const activities = [
     {
+        name: "Portfolio using React.js",
+        timeline: "Dec 2022 - Present",
+        skills: "Java Script, React.js, Firebase, CSS",
+        description:{
+            "Designed":" a personal portfolio web application with a Netflix-inspired UI/UX, utilizing React.js and CSS demonstrating skills in modern web technologies and user-centric design",
+            "Link": " https://resume-c79a2.web.app",
+            
+        },
+        logo:"Netflix",
+        link:"https://github.com/KaushalNaresh/naresh-kumar-kaushal-resume"
+    },
+    {
         name: "Relevant Research Retrieval: Comparative Analysis of Machine Learning Models on CORD-19 Dataset",
         timeline: "Mar 2023 - May 2023",
         skills: "Python, Natural Language Processing, Machine Learning",
@@ -181,25 +193,13 @@ export const activities = [
         link: "https://github.com/KaushalNaresh/COVID-19-Open-Research-Dataset-Challenge-CORD-19-"
     },
     {
-        name: "Portfolio",
-        timeline: "Dec 2022 - Jan 2023",
-        skills: "Java Script, React.js, Firebase, CSS",
-        description:{
-            "Designed":" a portfolio website with a look and feel of Netflix streaming platform",
-            "Link": " https://resume-c79a2.web.app",
-            
-        },
-        logo:"Netflix",
-        link:"https://github.com/KaushalNaresh/naresh-kumar-kaushal-resume"
-    },
-    {
         name: "Genre Classification using LSTM",
         timeline: "Oct 2022 - Dec 2022",
         skills: "Python, signal processing, LSTM, Keras, CNN",
         description: {
             "Implemented":" an LSTM-based model utilizing MFCCs and ZCR to extract deep features from famous music audio GTZAN dataset for genre classification.",
             "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms because of its ability to remember past information of the cells.",
-            "Accuracy": " Achieved a testing accuracy of around 82% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
+            "Achieved": " a testing accuracy of around 82% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
         },
         logo:"Genre",
         link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
@@ -209,9 +209,9 @@ export const activities = [
         timeline: "Nov 2021 - Jan 2022",
         skills: "Python, Keras, Audio Processing, Deep Learning",
         description:{
-            "Worked":" on a project to improve driver voice assistance technology using ML to help reduce road accidents.",
+            "Collaborated":" on a project to improve driver voice assistance technology using ML to help reduce road accidents.",
             "Spearheaded the pre-processing team" : " to develop a model for speech enhancement using U-Net or Convolutional-Autoencoders with skip connections.",
-            "Denoised" : " higher Sound to Noise ratio (SNR) audio files with significant lower word error rate of around 40%."
+            "Integrated" : " a language model to enhance intelligibility, resulting in a word error rate reduction to 33%, and feeding the improved output to a RASA-based chatbot."
         },
         logo:"Omdena",
         link:"https://github.com/KaushalNaresh/Speech_enhancement_using_convolutional_autoencoders"
@@ -221,8 +221,8 @@ export const activities = [
         timeline:"Jan 2021 - May 2021",
         skills: "Python, Keras, Deep Learning",
         description:{
-            "Implemented a supervised model": " to classify HDLSS (High Dimension Low Sample Size) data.",
-            "Integrated various techniques": " like Boosting, greedy feature selection, PCA (principal component Analysis) and Deep Neural Networks (DNN) to resolve 2 main isuues of high variance and overfitting with HDLSS data.",
+            "Developed a supervised model": " for classifying High Dimension Low Sample Size (HDLSS) cancer data using mRNA-Seq gene expression values of patients with different molecular subtypes",
+            "Integrated various techniques": " like boosting, greedy feature selection, PCA, and Deep Neural Networks (DNN) to overcome the challenges of high variance and overfitting in HDLSS data",
             "Accuracy": " 90%"
         },
         logo:"Btech",

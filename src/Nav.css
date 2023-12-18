@@ -18,10 +18,12 @@
 
 .nav__hyperlinks{
     display: flex;
-    gap: 50px;
-    flex: 0.75;
+    /* gap: 50px; */
+    justify-content: space-between;
+    flex: 0.50;
     align-items: center;
     margin-left: 5%;
+    font-size: 15px;
 }
 
 .nav__hyperlinks > a{
