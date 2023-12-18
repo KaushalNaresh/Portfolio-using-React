@@ -1,14 +1,42 @@
-export const ucdavis_description = "Working as part-time graduate student researcher under Prof. Lee Miller in Nueroscience department at Center for Mind and Brain.";
-export const ucdavis_degree_and_gpa = "Masters in Computer Science, GPA: 3.9";
-export const ucdavis_timeline = "Sept 2022–May 2024";
-export const ucdavis_address = "Davis, California";
-
-export const iitgoa_degree_and_gpa = "Bachelor of Technology in Computer Science and Engineering, GPA: 9.17";
-export const iitgoa_description = "Awarded Institute Bronze medal for second rank in Computer Science Department";
-export const iitgoa_address = "Goa, India ";
-export const iitgoa_timeline = "Aug 2017–May 2021";
-
 export const admin_email = "09naresh3@gmail.com";
+
+export const education = [
+    {
+        id: 1,
+        school: "University Of California Davis",
+        degree: "Master Of Science",
+        department: "Computer Science",
+        address: "Davis, California",
+        timeline: "Sep 2022 - Apr 2024",
+        gpa: "3.9",
+        courses: ["Advanced Data Structures and Algorithms", "Software Development", "Machine learning and Discovery", "Advance Statistical Computing", "Computer And Information Security"],
+        skills: "Machine Learning, Signal Processing, Python programming",
+        achievements: ["Selected as part-time graduate student researcher under Prof. Lee Miller in Nueroscience department at Center for Mind and Brain"],
+        links: ["https://www.ucdavis.edu/", "https://millerlab.faculty.ucdavis.edu/people/"],
+        transcriptLink: "master_transcript.pdf",
+        logo: "ucdavis_logo",
+    },
+    {
+        id: 2,
+        school: "Indian Institute Of Technology Goa",
+        degree: "Bachelor Of Technology",
+        address: "Goa, India",
+        department: "Computer Science And Engineering",
+        timeline: "Aug 2017 - May 2021",
+        gpa: "9.17",
+        courses: ["Data Structures", "Design and Analysis Of Algorithms", "Combinatorial Optimizations", "Operating System", "Computer Architecture", "Introduction To Programming", "Linear Algebra", "Differential Equations", "Multivariate Calculus", "Data Analytics", "Numerical Analysis", "Machine Learning", "Artifical Intelligence"],
+        achievements: ["Institute Bronze medal for second rank in CSE 2017 Batch"],
+        skills: "C++, Java, Python, HTML5, CSS, Machine Learning, Linear Algenra, Threading",
+        extracurricular: {
+            "Sectretary IEEE Student Branch": "Assisted in organizing and planning various technical and non-technical events, workshops, and seminars, enhancing the professional and technical skills of members which lead significant growth in mebership",
+            "Coding Club Core Member": "Collaborated as an integral member of the core team in managing and directing the activities of the Student's Coding Club in the planning, organization, and execution of coding workshops, hackathons, and competitive coding events among several new and old IIT's, promoting a culture of innovation and technical excellence.",
+            "Electronics and Robotics Club Core Member": "Led instructional workshops on Arduino programming, soldering techniques, breadboard use, and basic to advanced electronics principles, fostering practical, hands-on learning enabling students to integrate software and hardware effectively."
+        },
+        links: ["https://iitgoa.ac.in/"],
+        transcriptLink: "bachelor_transcript.pdf",
+        logo: "iitgoa_logo"
+    }
+];
 
 export const work_experiences = [
     {
@@ -19,9 +47,9 @@ export const work_experiences = [
         timeline:"Apr 2022 - Present",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain to develop a non-invasive multimodal silent speech interface (SSI) using sEMG signals for patients with Dyarthria.",
-            "":"Executed a multimodal strategy involving sEMG signals, audio, and video to proficiently cluster 39 phonemes, yielding promising initial results with an approximate accuracy of 85%.",
-            "Literature review":" Conducted extensive literature review in SSI to uncover challenges and opportunities. Exploring self-supervised techniques for label-free learning and direct sEMG-to-voice conversion, preserving prosody and essential features."
+            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain as Machine Learning Researcher to develop a non-invasive multimodal silent speech interface (SSI) for patients with Dysarthria",
+            "":"Implemented a supervised model to generate Hu-BERT speech units by decoding sEMG signals using CNN-RNN and attention based transformer model achieving a WER of 35%",
+            "Future Works":" Working to incorporate multimodal strategy combining sEMG signals, audio, and video (lipreading) to reduce the phoneme confusions and improve WER"
         },
         logo:"cmb"
     },
@@ -33,10 +61,9 @@ export const work_experiences = [
         timeline:"Jun 2021 – Apr 2022",
         website:"https://wooqer.com",
         description:{
-            "Gallery for better Visual Experience":"Spearheaded the project to design an interactive gallery with the feature of providing contextual feedback on images and sending context-based notifications.",
-            "":"Improved customer engagement by 45% through the implementation of new visual merchandising features in the gallery, benefiting Lenskart and other retail stores.",
-            "Mobile Refresh Project": "Revamped Wooqer mobile app (Android and iOS) as a back-end developer by designing new APIs and optimizing existing ones. This effort led to a marked increase in app responsiveness and efficiency, resulting in a notable 25% reduction in critical response times.",
-            "Debugging":"Resolved product-related errors faced by customers in collaboration with the customer success and quality assurance teams."
+            "Gallery for better Visual Experience":" Spearheaded a web-development team of 5 to design an interactive gallery using Spring MVC framework with a new feature of point annotation and commenting, improving customer engagement by 45%",
+            "Mobile Refresh Project": " Designed new APIs and optimized existing ones to revamp Wooqer mobile app (Android and iOS) resulting in 25% reduction in critical response times",
+            "Debugging":" Resolved multiple product-related errors tracked in JIRA through close collaboration with the Customer Success and Quality Assurance teams"
         },
         logo:"wooqer"
     },
@@ -48,9 +75,8 @@ export const work_experiences = [
         timeline:"June 2020 – Dec 2020",
         website:"https://planful.com",
         description:{
-            "Data quality assessment tool": "Created a data quality assessment tool to identify anomalies in financial data, assign quality scores, and offer valuable insights and predictions to customers.",
-            "":"Utilized the tool to detect sparse datasets, significant fluctuations, and inconsistent values, leading to a 40% reduction in data-related errors and improved predictive model accuracy.",
-            "Debugging":"Collaborated on debugging and testing initiatives, swiftly resolving pending issues on JIRA, documenting code, and providing guidance to onboard new team members."
+            "Data quality assessment tool": "Designed a .NET console app in C# and MySQL to identify anomalies in financial data and assign quality scores, reducing prediction errors in financial planning models by 40%",
+            "Debugging":"Collaborated with senior developers to debug code using NUnit framework, resolving 30+ pending issues on JIRA and documented code for future KT sessions"
         },
         logo:"planful"
     },

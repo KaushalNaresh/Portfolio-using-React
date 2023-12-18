@@ -25,31 +25,31 @@ function Nav() {
     }, []);
 
     return (
-        <div className={`nav ${show && "nav__black"}`}>
-            <div className='nav__contents'>
+        <div className={`nav ${show && "nav__black"}`} id='nav'>
                 {/* <img 
                     onClick={() => navigate('/')}
                     className='nav__logo'
                     src={logo}
                     alt=""
                 /> */}
-
-                <a className = "nav__download" 
-                   id="nav__download__id"
-                   href="NareshKumarKaushal_Resume.pdf" 
-                   download="NareshKumarKaushal_Resume.pdf">
-                    <AiOutlineDownload id = "nav__download" 
-                                       data-tooltip-content="Download Resume"/>
-                    <span>Download Resume</span>
-                </a>
-                <Tooltip anchorId="nav__download" arrow/>
-                {/* <img 
-                    onClick={() => navigate("/profile")}
-                    className='nav__avatar'
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-                    alt=""
-                /> */}
-            </div>
+                <div className = "nav__hyperlinks">
+                    <a href = "#nav">Home</a>
+                    <a href = "#education">Education</a>
+                    <a href = "#work__experience">Work Experience</a>
+                    <a href = "#projects">Projects</a>
+                    <a href = "">Message Me!</a>
+                </div>
+                <div className = "nav__buttons">
+                    <a className = "nav__download" 
+                    id="nav__download__id"
+                    href="NareshKumarKaushal_Resume.pdf" 
+                    download="NareshKumarKaushal_Resume.pdf">
+                        <AiOutlineDownload id = "nav__download" 
+                                        data-tooltip-content="Download Resume"/>
+                        <span>Download Resume</span>
+                    </a>
+                    <Tooltip anchorId="nav__download" arrow/>
+                </div>
         </div>
     )
 }

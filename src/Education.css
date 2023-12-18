@@ -1,8 +1,4 @@
-.education__contents{
-    display: flex;
-    flex-direction: column;
-    margin: 2px 5%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 @font-face {
     font-family: 'Netflix Sans Bold';
@@ -17,6 +13,53 @@
 @font-face {
     font-family: 'Netflix Sans Medium';
     src: url('./fonts/NetflixSansMedium.otf') format('otf');
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .education__info{
+        font-size: 12px;
+    }
+    .education__info > h1{
+        font-size: 16px;
+    }
+    .education__timeline{  
+        font-size: 12px;
+    }
+    .education__header{
+        font-size: 18px;
+    }
+    .education{
+        padding: 8px 0px;
+    }
+}
+
+@media (max-width: 812px) {
+    .education__info{
+        font-size: 9px;
+    }
+    .education__info > h1{
+        font-size: 11px;
+    }
+    .education__timeline{ 
+        font-size: 9px;
+    }
+    .education__header{
+        font-size: 15px;
+    }
+    .education{
+        padding: 6px 0px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Set the font similar to Netflix's */
+}
+
+.education__contents{
+    display: flex;
+    flex-direction: column;
+    margin: 2px 5%;
 }
 
 .education__header{
@@ -35,12 +78,6 @@
 .education__header > span:nth-child(2){
     border: 1px solid #777;
 }
-
-/* .education__chronology{
-    display: flex;
-    flex-direction: column;
-    color: white;
-} */
 
 .education__chronology {
     display: grid;
@@ -65,8 +102,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
-
   
 .education__card:hover {
     transform: translateY(-5px);
@@ -82,11 +119,8 @@
     display: flex;
     flex-direction: column;
     flex: 75%;
-}
-
-.education__info > span{
     font-size: 14px;
-    margin-bottom: 5px;
+    gap: 2px;
 }
 
 .education__timeline{
@@ -105,39 +139,14 @@
     margin: 10px 0;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1024px) {
-    .education__info > h1{
-        font-size: 16px;
-    }
-    .education__info > span{
-        font-size: 12px;
-    }
-    .education__timeline{  
-        font-size: 12px;
-    }
-    .education__header{
-        font-size: 18px;
-    }
-    .education{
-        padding: 8px 0px;
-    }
-}
-
-@media (max-width: 812px) {
-    .education__info > h1{
-        font-size: 11px;
-    }
-    .education__info > span{
-        font-size: 9px;
-    }
-    .education__timeline{ 
-        font-size: 9px;
-    }
-    .education__header{
-        font-size: 15px;
-    }
-    .education{
-        padding: 6px 0px;
-    }
+.download-transcript-button {
+    /* Add your styling here */
+    padding: 5px;
+    background-color: #E50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
 }

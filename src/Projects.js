@@ -21,7 +21,7 @@ function Projects() {
                  'Genre': Genre,
                  'Covid': Covid};
   return (
-    <div className='projects'>
+    <div className='projects' id="projects">
         <h1>Projects</h1>
         <div className='projects__row'>
             {

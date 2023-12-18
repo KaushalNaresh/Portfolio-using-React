@@ -4,7 +4,7 @@ import Nav from '../Nav'
 import Education from '../Education'
 import WorkExperience from '../WorkExperience'
 import Projects from '../Projects'
-import Comments from '../Comments'
+import ContactMe from '../ContactMe'
 
 function HomeScreen() {
   return (
@@ -14,6 +14,7 @@ function HomeScreen() {
         <Education />
         <WorkExperience />
         <Projects/>
+        <ContactMe />
         {/* <Comments/> */}
     </div>
   )

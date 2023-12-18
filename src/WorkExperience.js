@@ -19,7 +19,7 @@ function WorkExperience() {
   }
 
   return (
-    <div className='work__experience'>
+    <div className='work__experience' id='work__experience'>
         <h1>Work Experience</h1>
 
         {

@@ -2,82 +2,54 @@ import React from 'react'
 import './Education.css'
 import {FaGraduationCap} from 'react-icons/fa'
 import * as Constants from './Constants'
+import Modal from './Modal';
+import { useState } from 'react';
 
 function Education() {
-  return (
-    <div className='education'>
-        <div className='education__contents'>
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedEdu, setSelectedEdu] = useState(null);
 
-            <div className='education__header'>
-                <span>Education </span> &nbsp;<FaGraduationCap size={20} color='white'/>
+    const openModal = (eduItem) => {
+        setSelectedEdu(eduItem);
+        setModalOpen(true);        
+    };
+       
+    const closeModal = () => setModalOpen(false);
+
+    return (
+
+    <div className='education' id='education'>
+            <div className='education__contents'>
+                <div className='education__header'>
+                    <span>Education </span> &nbsp;<FaGraduationCap size={20} color='white'/>
+                </div>
+                <div className='education__chronology'>
+                    {Constants.education.map((edu) => (
+                        <div key={edu.id} className="education__section">
+                            {/* Replace the below content with your actual education details structure */}
+                            
+                            <div className='education__card' onClick={()=>openModal(edu)}>
+                                <div className='education__details'>
+                                    <div className='education__info'>
+                                        <h1>{edu.school}</h1>
+                                        <div><span>{edu.degree},</span>&nbsp;
+                                        <span>{edu.department}</span></div>
+                                        <span>GPA: {edu.gpa}</span>
+                                        <span>{edu.description}</span>
+                                    </div>
+                                    <div className='education__timeline'>
+                                        <div>{edu.address}</div> 
+                                        <div>{edu.timeline}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>     
             </div>
-
-            {/* <div className='education__chronology'>
-
-                <div className='education one'>
-                    <div className='education__details'>
-                        <div className='education__info'>
-                            <h1>University Of California Davis</h1>
-                            <span>{Constants.ucdavis_degree_and_gpa}</span>
-                            <span>{Constants.ucdavis_description}</span> 
-                        </div>
-                        <div className='education__timeline'>
-                            <span>{Constants.ucdavis_address}</span>&nbsp;
-                            <span>{Constants.ucdavis_timeline}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='education two'>
-                    <div className='education__details'>
-                        <div className='education__info'>
-                            <h1>Indian Institute Of Technology Goa</h1>
-                            <span>{Constants.iitgoa_degree_and_gpa}</span>
-                            <span>{Constants.iitgoa_description}</span> 
-                        </div>
-                        <div className='education__timeline'>
-                            <span>{Constants.iitgoa_address}</span>&nbsp; 
-                            <span>{Constants.iitgoa_timeline}</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div> */}
-
-            <div className='education__chronology'>
-                <div className='education__card'>
-                    <div className='education__details'>
-                    <div className='education__info'>
-                        <h1>University Of California Davis</h1>
-                        <span>{Constants.ucdavis_degree_and_gpa}</span>
-                        <span>{Constants.ucdavis_description}</span>
-                    </div>
-                    <div className='education__timeline'>
-                        <div>{Constants.ucdavis_address}</div> 
-                        <div>{Constants.ucdavis_timeline}</div>
-                    </div>
-                    </div>
-                </div>
-
-                <div className='education__card'>
-                    <div className='education__details'>
-                    <div className='education__info'>
-                        <h1>Indian Institute Of Technology Goa</h1>
-                        <span>{Constants.iitgoa_degree_and_gpa}</span>
-                        <span>{Constants.iitgoa_description}</span>
-                    </div>
-                    <div className='education__timeline'>
-                        <div>{Constants.iitgoa_address}</div> 
-                        <div>{Constants.iitgoa_timeline}</div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            
+            <Modal isOpen={isModalOpen} onClose={closeModal} eduData={selectedEdu}></Modal>
         </div>
-    </div>
-  )
+    );
 }
 
 export default Education

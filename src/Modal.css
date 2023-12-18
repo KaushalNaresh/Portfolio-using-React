@@ -1,0 +1,164 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #141414; /* Netflix's dark background */
+    color: #fff; /* White text for readability */
+    border-radius: 8px; /* Soften the corners */
+    padding: 20px; /* Space inside the modal */
+    position: fixed;
+    max-height: 80vh; /* Adjust the height as needed */
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+    float: right;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+}
+  
+/* .modal-content {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+    font-size: 14px;
+    gap: 2px;
+} */
+
+.modal-education__info{
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+    font-size: 14px;
+    gap: 10px;
+    /* margin-bottom: 5px; */
+}
+
+.modal-education__timeline{
+    margin-left: auto;
+    text-align: center;  
+    font-size: 14px;
+    flex: 25%;
+}
+
+.modal-education__details{ 
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.modal-education__timeline > div:first-child{
+    color: #777;
+}
+
+.modal-education__info > h1{
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.modal-education__extracurricular{
+    text-align: justify;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .modal-education__info{
+        font-size: 12px;
+    }
+    .modal-education__info > h1{
+        font-size: 16px;
+    }
+    .modal-education__timeline{  
+        font-size: 12px;
+    }
+    .modal-education__header{
+        font-size: 18px;
+    }
+    .modal-education{
+        padding: 8px 0px;
+    }
+}
+
+@media (max-width: 812px) {
+    .modal-education__info{
+        font-size: 9px;
+    }
+    .modal-education__info > h1{
+        font-size: 11px;
+    }
+    .modal-education__timeline{ 
+        font-size: 9px;
+    }
+    .modal-education__header{
+        font-size: 15px;
+    }
+    .modal-education{
+        padding: 6px 0px;
+    }
+}
+
+.modal-img-banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Set a fixed height for the banner */
+    overflow: hidden; /* Hide overflow to maintain a clean look */
+}
+
+.modal-img-banner > img {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove any default border from the iframe */
+    position: 'absolute';
+    top: 0;
+    left: 0;
+}
+
+.modal-university-name-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+    height: 4rem;
+    background-image: linear-gradient(
+        180deg, 
+        transparent,
+        rgba(37,37,37,0.61),
+        #141414
+    );
+    color: white;
+}
+
+.modal-university-name {
+    padding: 5px 0; /* Padding for the text */
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} 
+
+.modal-extracurr__achvmnts{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    gap: 10px;
+}

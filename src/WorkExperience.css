@@ -16,6 +16,7 @@
     cursor: pointer;
     color:#9e9c9c;
     font-size: 50px;
+    z-index: 2;
     /* position: absolute;
     left: 0;
     right: 0;

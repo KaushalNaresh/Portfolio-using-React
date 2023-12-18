@@ -1,0 +1,38 @@
+.contact-me {
+    background-color: #141414;
+    color: #fff;
+    padding: 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.contact-me h2 {
+    color: #e50914;
+}
+
+.contact-me form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-me input,
+.contact-me textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.contact-me textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-me button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    border: none;
+}
