@@ -173,9 +173,8 @@ export const activities = [
         timeline: "Dec 2023 - Present",
         skills: "React.js, MongoDB, Express, Node.js, CSS",
         description:{
-            "Led":" the design and development of a web application for Indian students at UC Davis using the MERN stack (MongoDB, Express.js, React.js, Node.js). The project aimed to facilitate a smoother transition for students by providing a platform for sharing resources, guidance, and community events.",
-            "Implementing":" features like finding compatible roommate, housing options using machine learning algorithms.",
-            
+            "Spearheaded":" the creation of a MERN stack-based web application for UC Davis' Indian student community, focusing on cultural integration, sharing recources and community events",
+            "Implementing":" AI-driven content curation like finding compatible roommate, housing options and sending real-time updates, catering to the dynamic needs of the student community and fostering a connected campus experience.",
         },
         logo:"Icd",
         link:"https://github.com/KaushalNaresh/Indian_Davis_Community"
