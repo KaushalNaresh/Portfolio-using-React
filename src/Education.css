@@ -15,43 +15,6 @@
     src: url('./fonts/NetflixSansMedium.otf') format('otf');
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1024px) {
-    .education__info{
-        font-size: 12px;
-    }
-    .education__info > h1{
-        font-size: 16px;
-    }
-    .education__timeline{  
-        font-size: 12px;
-    }
-    .education__header{
-        font-size: 18px;
-    }
-    .education{
-        padding: 8px 0px;
-    }
-}
-
-@media (max-width: 812px) {
-    .education__info{
-        font-size: 9px;
-    }
-    .education__info > h1{
-        font-size: 11px;
-    }
-    .education__timeline{ 
-        font-size: 9px;
-    }
-    .education__header{
-        font-size: 15px;
-    }
-    .education{
-        padding: 6px 0px;
-    }
-}
-
 body {
     font-family: 'Roboto', sans-serif; /* Set the font similar to Netflix's */
 }
@@ -149,4 +112,41 @@ body {
     display: inline-block;
     height: fit-content;
     width: fit-content;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .education__info{
+        font-size: 12px;
+    }
+    .education__info > h1{
+        font-size: 16px;
+    }
+    .education__timeline{  
+        font-size: 12px;
+    }
+    .education__header{
+        font-size: 18px;
+    }
+    .education{
+        padding: 8px 0px;
+    }
+}
+
+@media (max-width: 812px) {
+    .education__info{
+        font-size: 9px;
+    }
+    .education__info > h1{
+        font-size: 11px;
+    }
+    .education__timeline{ 
+        font-size: 9px;
+    }
+    .education__header{
+        font-size: 15px;
+    }
+    .education{
+        padding: 6px 0px;
+    }
 }

@@ -6,18 +6,27 @@ import useTypewriter from 'react-typewriter-hook';
 import profilePhoto from './images/personal_headshot.jpg'
 import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
+import collageGIF from "./images/naresh_background.gif";
+import staticImage from "./images/naresh_background.JPG";
 
 function Banner() {
     const name = "Naresh Kumar Kaushal";
 
-    return (
-        <header className='banner'
-            style={{
-                backgroundSize: "cover",
-                backgroundImage: `url(https://tinyurl.com/mrh4jpe5)`,
-                backgroundPosition: "center center",
-            }}>
+    const [background, setBackground] = useState(collageGIF);
+    const gifDuration = 5000; // Duration of your GIF in milliseconds
 
+    useEffect(() => {
+        // Switch to the static image after the GIF has played for its duration
+        const timer = setTimeout(() => {
+        setBackground(staticImage);
+        }, gifDuration);
+
+        // Clear the timeout if the component unmounts
+        return () => clearTimeout(timer);
+    }, []);
+
+    return (
+        <header className='banner'>
             <div className='banner__contents'>
                 <h1 className="banner__title">
                     <div>

@@ -10,10 +10,50 @@
     display: flex;
 }
 
+.nav__hamburger-icon {
+    display: none;
+}
+
+/* The sidebar, initially off-screen */
+.nav__sidebar {
+   display: flex;
+   flex: 1;
+}
+
+/* Open state for the sidebar */
+.nav__sidebar.open {
+    left: 0;
+    color: white;
+    width: 250px;
+    height: 100%;
+    background: black;
+    transition: right 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Assuming the sidebar width is 250px */
+    flex-direction: column;
+}
+
+.nav__hyperlinks.open{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav__hyperlinks.open > a{
+    color: white;
+}
+
 .nav__buttons{
     display: flex;
-    flex: 0.25;
-    justify-items: flex-start;
+    flex: 0.50;
+    justify-content: flex-end;
+}
+
+.nav__buttons.open{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .nav__hyperlinks{
@@ -32,13 +72,17 @@
     text-decoration: none;
 }
 
+.nav__hyperlinks a:hover{
+    font-weight: bold;
+}
+
 .nav__download{
-    flex: 0.25;
-    position: fixed;
-    right: 100px;
+    /* position: fixed;
+    right: 100px; */
     color: #9e9c9c;
     font-size: 35px;
     cursor: pointer;
+    padding-right: 100px;
 }
 
 #nav__download__id{
@@ -89,10 +133,27 @@
     height: 30px;
 }
 
+.nav__download.open{
+    padding-right: 0px;
+}
+
+.nav__download.open > span{
+    font-size: 15px;
+    color: white;
+}
+
+.nav__cancel.open{
+    display: flex;
+    justify-content: flex-end;
+    size: 1rem;
+    margin: 20px;
+}
+
+.nav__cancel.close{
+    display: none;
+}
+
 @media (max-width: 1024px) {
-    .nav__download > span{
-        display: flex;
-    }
     .nav__download{
         right: 25px;
         font-size: 30px;
@@ -107,4 +168,31 @@
         right: 25px;
         font-size: 30px;
     }
+    .nav__hamburger-icon {
+        display: block;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    #nav__download{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
+}
+
+/* Optional: Add a backdrop when sidebar is open */
+/* .nav__sidebar-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} */
+
+.nav__hamburger-icon.open{
+    display: none;
 }

@@ -18,9 +18,13 @@
     position: relative;
     color: white;
     object-fit: contain;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/naresh_background.gif');
+    background-position: center;
+    /* filter: blur(5px); */
 }
 
 .banner__contents{
+    text-shadow: 2px 2px 4px #000000;
     margin-left: 5%;
     padding-top: 140px;
     height: 190px;
@@ -78,14 +82,8 @@
     color: black;
     outline: none;
     border: none;
-    /* font-weight: 500; */
     border-radius: 0.2vw;
-    /* padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 1rem;
-    padding-top: 0.5rem; */
     background-color: white;
-    /* padding-bottom: 0.5rem; */
     text-align: center;
     width: 5rem;
     height: 2rem;
@@ -94,6 +92,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 4px #000000;
 }
 
 .banner__button:hover{
