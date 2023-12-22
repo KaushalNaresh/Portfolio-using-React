@@ -145,6 +145,9 @@
         opacity: 1;
         font-size: 25px;
     }
+    .activityCard:hover{
+        transform: scale(1);
+    }
 }
 
 .activityCard__row1{

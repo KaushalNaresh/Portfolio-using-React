@@ -104,6 +104,9 @@
     .modal-project{
         padding: 6px 0px;
     }
+    .modal{
+        width: 50%;
+    }
 }
 
 .modal-img-banner {
