@@ -26,7 +26,7 @@ function Banner() {
     }, []);
 
     return (
-        <header className='banner'>
+        <header className='banner' id="banner">
             <div className='banner__contents'>
                 <h1 className="banner__title">
                     <div>

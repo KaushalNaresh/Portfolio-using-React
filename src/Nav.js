@@ -38,7 +38,7 @@ function Nav() {
                 <div className={`nav__sidebar ${sidebarOpen ? "open" : ""}`}>
                     <div className={`nav__cancel ${sidebarOpen ? "open" : "close"}`} onClick={toggleSidebar}><RxCross2/></div>
                     <div className = {`nav__hyperlinks ${sidebarOpen ? "open" : "close"}`}>
-                        <a href = "#nav">Home</a>
+                        <a href = "#banner">Home</a>
                         <a href = "#education">Education</a>
                         <a href = "#work__experience">Work Experience</a>
                         <a href = "#projects">Projects</a>
