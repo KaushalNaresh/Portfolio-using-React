@@ -76,9 +76,17 @@
     text-align: justify;
 }
 
+.modal-extracurr__achvmnts{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    gap: 10px;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 1024px) {
-    .modal-education__info{
+    .modal-education__info .modal-education__achievements .modal-education__extracurricular{
         font-size: 12px;
     }
     .modal-education__info > h1{
@@ -96,7 +104,7 @@
 }
 
 @media (max-width: 812px) {
-    .modal-education__info{
+    .modal-education__info .modal-education__achievements .modal-education__extracurricular{
         font-size: 9px;
     }
     .modal-education__info > h1{
@@ -157,11 +165,3 @@
     left: 0;
     right: 0;
 } 
-
-.modal-extracurr__achvmnts{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    gap: 10px;
-}
