@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Portfolio-using-React/static/css/main.45cd59db.css",
+    "main.js": "/Portfolio-using-React/static/js/main.6f1c0390.js",
+    "static/js/787.b84c8ff9.chunk.js": "/Portfolio-using-React/static/js/787.b84c8ff9.chunk.js",
+    "static/media/naresh_background.gif": "/Portfolio-using-React/static/media/naresh_background.8ff6ede7055e4f9b9f7a.gif",
+    "static/media/Omdena.gif": "/Portfolio-using-React/static/media/Omdena.7cc2094747aaef7912cd.gif",
+    "static/media/naresh_background.JPG": "/Portfolio-using-React/static/media/naresh_background.6ece875d3fa92f639ddf.JPG",
+    "static/media/ICD.png": "/Portfolio-using-React/static/media/ICD.782d2b5829546c2c6ed9.png",
+    "static/media/iit_goa.jpeg": "/Portfolio-using-React/static/media/iit_goa.f03b3f64b35192512cb2.jpeg",
+    "static/media/covid.gif": "/Portfolio-using-React/static/media/covid.a9015c3d10a1674c8044.gif",
+    "static/media/Netflix.gif": "/Portfolio-using-React/static/media/Netflix.474c1e7a40d880c59f1d.gif",
+    "static/media/Btech.gif": "/Portfolio-using-React/static/media/Btech.291298424f7974cc9fd5.gif",
+    "static/media/Genre.gif": "/Portfolio-using-React/static/media/Genre.0917640f4b1bcee34dc7.gif",
+    "static/media/personal_headshot.jpg": "/Portfolio-using-React/static/media/personal_headshot.a2b50cb781cbdbc4b784.jpg",
+    "static/media/uc_davis.jpeg": "/Portfolio-using-React/static/media/uc_davis.85ca0ab34834bdddc06b.jpeg",
+    "static/media/resume_logo.png": "/Portfolio-using-React/static/media/resume_logo.37a0a6d3d2710d746721.png",
+    "static/media/NetflixSansMedium.otf": "/Portfolio-using-React/static/media/NetflixSansMedium.bd89dc7a3ae394c9f7c8.otf",
+    "static/media/NetflixSansBold.otf": "/Portfolio-using-React/static/media/NetflixSansBold.232bc084a6b82ae33844.otf",
+    "static/media/NetflixSansLight.otf": "/Portfolio-using-React/static/media/NetflixSansLight.7494226546f1feeb3664.otf",
+    "static/media/cmb.jpeg": "/Portfolio-using-React/static/media/cmb.94f21612242e8597b75e.jpeg",
+    "static/media/planful_logo_transparent.png": "/Portfolio-using-React/static/media/planful_logo_transparent.a615e9afe23618067591.png",
+    "static/media/wooqer_logo_transparent.png": "/Portfolio-using-React/static/media/wooqer_logo_transparent.481c4ec2c5e55e2af19c.png",
+    "index.html": "/Portfolio-using-React/index.html",
+    "main.45cd59db.css.map": "/Portfolio-using-React/static/css/main.45cd59db.css.map",
+    "main.6f1c0390.js.map": "/Portfolio-using-React/static/js/main.6f1c0390.js.map",
+    "787.b84c8ff9.chunk.js.map": "/Portfolio-using-React/static/js/787.b84c8ff9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45cd59db.css",
+    "static/js/main.6f1c0390.js"
+  ]
+}
