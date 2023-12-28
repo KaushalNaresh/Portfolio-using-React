@@ -83,6 +83,10 @@
     .project-modal-project{
         padding: 8px 0px;
     }
+    .project-modal{
+        width: 60%;
+        height: 50%;
+    }
 }
 
 @media (max-width: 812px) {
@@ -99,7 +103,8 @@
         padding: 6px 0px;
     }
     .project-modal{
-        width: 50%;
+        width: 80%;
+        height: 50%;
     }
 }
 

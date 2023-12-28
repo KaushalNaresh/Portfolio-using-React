@@ -75,6 +75,9 @@
 }
 .WorkEx__name{
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .WorkEx__name > span:first-child{
@@ -82,7 +85,7 @@
 }
 
 .WorkEx__name > span:nth-child(2){
-    font-weight: 400;
+    font-size: 15px;
 }
 
 .WorkEx__timeAddress{
@@ -128,8 +131,11 @@
 
 /* Media query for smaller screens */
 @media (max-width: 1024px) {
-    .WorkEx__name {
+    .WorkEx__name > span:first-child {
         font-size: 15px;
+    }
+    .WorkEx__name > span:nth-child(2) {
+        font-size: 13px;
     }
     .WorkEx__timeAddress{
         font-size: 0.8em;
@@ -155,8 +161,11 @@
 }
 
 @media (max-width: 812px) {
-    .WorkEx__name {
+    .WorkEx__name > span:first-child {
         font-size: 11px;
+    }
+    .WorkEx__name > span:nth-child(2) {
+        font-size: 9px;
     }
     .WorkEx__timeAddress{
         font-size: 0.7em;

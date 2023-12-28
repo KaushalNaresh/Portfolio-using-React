@@ -7,8 +7,8 @@ function WorkExRow({idx, name, description, address, timeline, role, skills, log
     <div className='WorkEx__wrapper'>
         <div className='WorkEx__header'>
             <div className='WorkEx__name'>
-                <span>{name}</span> &nbsp;
-                <span>| {role}</span>
+                <span>{name}</span>
+                <span>{role}</span>
             </div>
             <div className='WorkEx__timeAddress'>
                 <div>{timeline}</div>
