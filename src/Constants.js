@@ -180,7 +180,7 @@ export const activities = [
         link:"https://github.com/KaushalNaresh/Indian_Davis_Community"
     },
     {
-        name: "Portfolio using React.js",
+        name: "Personal Portfolio",
         timeline: "Dec 2022 - Present",
         skills: "Java Script, React.js, Firebase, CSS",
         description:{
@@ -192,7 +192,7 @@ export const activities = [
         link:"https://github.com/KaushalNaresh/naresh-kumar-kaushal-resume"
     },
     {
-        name: "Relevant Research Retrieval: Comparative Analysis of Machine Learning Models on CORD-19 Dataset",
+        name: "Relevant Research Retrieval: Comparative Analysis of Natural Language Processing Models on CORD-19 Dataset",
         timeline: "Mar 2023 - May 2023",
         skills: "Python, Natural Language Processing, Machine Learning",
         description: {
@@ -204,7 +204,7 @@ export const activities = [
         link: "https://github.com/KaushalNaresh/COVID-19-Open-Research-Dataset-Challenge-CORD-19-"
     },
     {
-        name: "Genre Classification using LSTM",
+        name: "Music Genre Classification using LSTM",
         timeline: "Oct 2022 - Dec 2022",
         skills: "Python, signal processing, LSTM, Keras, CNN",
         description: {
@@ -216,7 +216,7 @@ export const activities = [
         link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
     },
     {
-        name: "Omdena real world AI Project",
+        name: "Improving driver voice assistant to reduce road accidents",
         timeline: "Nov 2021 - Jan 2022",
         skills: "Python, Keras, Audio Processing, Deep Learning",
         description:{

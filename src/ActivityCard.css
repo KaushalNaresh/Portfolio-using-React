@@ -50,6 +50,7 @@
     font-weight: 700;
     margin-bottom: 0.3em;
     font-size: 16px;
+    text-align: justify;
 }
 
 .activityCard__timeline{
@@ -152,8 +153,8 @@
 
 .activityCard__row1{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .activityCard__showMore__button{
@@ -163,7 +164,7 @@
     z-index: 2;
     justify-content: flex-start;
     display: flex;
-    margin-right: 20px;;
+    /* margin-right: 20px; */
 }
 
 .activityCard__showMore__button:hover{
