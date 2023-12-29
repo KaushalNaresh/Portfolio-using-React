@@ -2,7 +2,6 @@
   "name": "naresh-kumar-kaushal-resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://KaushalNaresh.github.io/Portfolio-using-React",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@sendgrid/mail": "^8.1.0",
