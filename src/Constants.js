@@ -8,7 +8,7 @@ export const education = [
         department: "Computer Science",
         address: "Davis, California",
         timeline: "Sep 2022 - Apr 2024",
-        gpa: "3.9",
+        gpa: "3.92",
         courses: ["Advanced Data Structures and Algorithms", "Software Development", "Machine learning and Discovery", "Advance Statistical Computing", "Computer And Information Security"],
         skills: "Machine Learning, Signal Processing, Python programming",
         achievements: ["Selected as part-time graduate student researcher under Prof. Lee Miller in Nueroscience department at Center for Mind and Brain"],
@@ -40,6 +40,20 @@ export const education = [
 
 export const work_experiences = [
     {
+        name:"Indian Student Association @ UC Davis",
+        role:"Software Engineer (Part-time)",
+        skills:"React.js, Node.js, Express.js, MongoDB, CSS, GitHub",
+        address:"Davis, California",
+        timeline:"Nov 2023 – Present",
+        website:"https://github.com/KaushalNaresh/Indian_Davis_Community",
+        description:{
+            "Indian Community @ Davis (ICD) web platform":" Co-founded and leading the development of full-stack web application using React.js, MongoDB and Node.js aimed at enhancing academic and social experience of Indian student community at UC Davis.",
+            "Features": " Implemented features like housing/roommate finder with dynamic matching algorithm; and currently working on event calendar and tailored recommendations.",
+            "API design":" Designed secure and efficient RESTful APIs on the backend using Node.js capable of fetching huge amount of data with minimal response time"
+        },
+        logo:"icd" 
+    },
+    {
         name:"Center for Mind and Brain",
         role:"Graduate Student Researcher",
         skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
@@ -48,8 +62,8 @@ export const work_experiences = [
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
             "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain as Machine Learning Researcher to develop a non-invasive multimodal silent speech interface (SSI) for patients with Dysarthria",
-            "":"Implemented a supervised model to generate Hu-BERT speech units by decoding sEMG signals using CNN-RNN and attention based transformer model achieving a WER of 35%",
-            "Future Works":" Working to incorporate multimodal strategy combining sEMG signals, audio, and video (lipreading) to reduce the phoneme confusions and improve WER"
+            "Methodology and Achievements":" Engineered an advanced supervised learning model that synthesizes speech by integrating sEMG and visual cues, employing a novel combination of CNN-RNN and attention-based Seq-to-Seq architectures, achieving a 35% WER",
+            "Future Works ":" Working to incorporate multimodal strategy combining sEMG signals, audio, and video (lipreading) to reduce the phoneme confusions and improve WER"
         },
         logo:"cmb"
     },
@@ -61,9 +75,9 @@ export const work_experiences = [
         timeline:"Jun 2021 – Apr 2022",
         website:"https://wooqer.com",
         description:{
-            "Gallery for better Visual Experience":" Spearheaded a web-development team of 5 to design an interactive gallery using Spring MVC framework with a new feature of point annotation and commenting, improving customer engagement by 45%",
-            "Mobile Refresh Project": " Designed new APIs and optimized existing ones to revamp Wooqer mobile app (Android and iOS) resulting in 25% reduction in critical response times",
-            "Debugging":" Resolved multiple product-related errors tracked in JIRA through close collaboration with the Customer Success and Quality Assurance teams"
+            "Gallery for better Visual Experience":" Spearheaded a Scrum team in the development of an interactive gallery, leveraging Java and Spring MVC framework, which resulted in a 25% increase in user engagement and significantly improved the user interface’s responsiveness and interactivity.",
+            "Mobile Refresh Project": " Enhanced API development by designing and optimizing RESTful services, improving system efficiency by 30% and streamlining data retrieval processes.",
+            "Debugging":" Effectively resolved over 100+ product-related issues tracked in JIRA, leading to a 40% reduction in customer complaints and contributing to the product’s overall stability and reliability"
         },
         logo:"wooqer"
     },
@@ -75,8 +89,8 @@ export const work_experiences = [
         timeline:"June 2020 – Dec 2020",
         website:"https://planful.com",
         description:{
-            "Data quality assessment tool": "Designed a .NET console app in C# and MySQL to identify anomalies in financial data and assign quality scores, reducing prediction errors in financial planning models by 40%",
-            "Debugging":"Collaborated with senior developers to debug code using NUnit framework, resolving 30+ pending issues on JIRA and documented code for future KT sessions"
+            "Data quality assessment tool ": " Developed a .NET console application in C# and integrated it with MySQL to automate anomaly detection in financial data, enhancing data accuracy and reducing prediction errors in financial planning models by 40%",
+            "Debugging ":" Collaborated with senior developers to debug code using NUnit framework, resolving 30+ pending issues on JIRA and documented code for future KT sessions"
         },
         logo:"planful"
     },
@@ -168,17 +182,17 @@ export const work_experiences = [
 ];
 
 export const activities = [
-    {
-        name: "Indian Community at Davis",
-        timeline: "Dec 2023 - Present",
-        skills: "React.js, MongoDB, Express, Node.js, CSS",
-        description:{
-            "Spearheaded":" the creation of a MERN stack-based web application for UC Davis' Indian student community, focusing on cultural integration, sharing recources and community events",
-            "Implementing":" AI-driven content curation like finding compatible roommate, housing options and sending real-time updates, catering to the dynamic needs of the student community and fostering a connected campus experience.",
-        },
-        logo:"Icd",
-        link:"https://github.com/KaushalNaresh/Indian_Davis_Community"
-    },
+    // {
+    //     name: "Indian Community at Davis",
+    //     timeline: "Dec 2023 - Present",
+    //     skills: "React.js, MongoDB, Express, Node.js, CSS",
+    //     description:{
+    //         "Spearheaded":" the creation of a MERN stack-based web application for UC Davis' Indian student community, focusing on cultural integration, sharing recources and community events",
+    //         "Implementing":" AI-driven content curation like finding compatible roommate, housing options and sending real-time updates, catering to the dynamic needs of the student community and fostering a connected campus experience.",
+    //     },
+    //     logo:"Icd",
+    //     link:"https://github.com/KaushalNaresh/Indian_Davis_Community"
+    // },
     {
         name: "Personal Portfolio",
         timeline: "Dec 2022 - Present",

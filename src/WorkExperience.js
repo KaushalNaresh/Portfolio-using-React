@@ -5,6 +5,7 @@ import WorkExRow from './WorkExRow'
 import wooqer_logo from "./images/wooqer_logo_transparent.png";
 import planful_logo from "./images/planful_logo_transparent.png";
 import cmb_logo from "./images/cmb.jpeg";
+import Icd from './images/ICD.png';
 import {IoIosArrowDropdown, IoIosArrowDropup} from "react-icons/io";
 
 function WorkExperience() {
@@ -15,7 +16,8 @@ function WorkExperience() {
   const logos = {
     "wooqer": wooqer_logo,
     "planful": planful_logo,
-    "cmb": cmb_logo
+    "cmb": cmb_logo,
+    "icd": Icd
   }
 
   return (
