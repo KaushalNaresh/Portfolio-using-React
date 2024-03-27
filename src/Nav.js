@@ -41,7 +41,9 @@ function Nav() {
                         <a href = "#banner">Home</a>
                         <a href = "#education">Education</a>
                         <a href = "#work__experience">Work Experience</a>
+                        <a href = "#ta">Teaching Experience</a>
                         <a href = "#projects">Projects</a>
+                        <a href = "#lang">Languages</a>
                         {/* <a href = "">Message Me!</a> */}
                     </div>
                     <div className = {`nav__buttons  ${sidebarOpen ? "open" : "close"}`}>

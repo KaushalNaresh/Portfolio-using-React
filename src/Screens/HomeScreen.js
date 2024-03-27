@@ -5,6 +5,8 @@ import Education from '../Education'
 import WorkExperience from '../WorkExperience'
 import Projects from '../Projects'
 import ContactMe from '../ContactMe'
+import TeachingExperience from '../TeachingExperience'
+import Languages from '../Languages'
 
 function HomeScreen() {
   return (
@@ -13,7 +15,9 @@ function HomeScreen() {
         <Banner />
         <Education />
         <WorkExperience />
+        <TeachingExperience/>
         <Projects/>
+        <Languages/>
         {/* <ContactMe /> */}
         {/* <Comments/> */}
     </div>

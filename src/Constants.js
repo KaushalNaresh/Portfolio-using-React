@@ -181,6 +181,53 @@ export const work_experiences = [
     
 ];
 
+export const teaching_experiences = [
+    {
+        course_name: 'Data Visualization PSC12Y',
+        timeline: "Apr 2024 - Jun 2024",
+        description: "In Progress....",
+        logo: 'PSC12Y',
+        link: 'https://catalog.ucdavis.edu/courses-subject-code/psc/'
+    },
+    {
+        course_name: 'General Psychology PSC001',
+        timeline: "Jan 2024 - Mar 2024",
+        description: "In my role as a Teaching Assistant for General Psychology (PSC001) under Prof. Kelly Michael King, I managed online office hours, graded exams, and collaborated with the professor in various administrative tasks, including designing exam papers.",
+        logo: 'PSC001',
+        link: 'https://catalog.ucdavis.edu/courses-subject-code/psc/'
+    },
+    {
+        course_name: 'General Chemistry CHE2B',
+        timeline: "Jan 2023 - Mar 2023",
+        description: "As a Teaching Assistant for UC Davis's General Chemistry (CHE2B) under Prof. Whitney Duim, I led discussions and labs, graded exams, and supported students during office hours, significantly boosting class performance and earning nominations for the Best TA Award.",
+        logo: 'CHE2B',
+        link: 'https://catalog.ucdavis.edu/courses-subject-code/che/'
+    }
+]
+
+export const languages = [
+    {
+        name: 'French 021 (Intermediate Level - B1)',
+        logo: 'FRE021'
+    },
+    {
+        name: 'French 003 (Basic Level - A2)',
+        logo: 'FRE01'
+    },
+    {
+        name: 'English',
+        logo: 'ENG'
+    },
+    {
+        name: 'Punjabi',
+        logo: 'PUN'
+    },
+    {
+        name: 'Hindi',
+        logo: 'HIN'
+    }
+]
+
 export const activities = [
     // {
     //     name: "Indian Community at Davis",
@@ -252,6 +299,18 @@ export const activities = [
         },
         logo:"Btech",
         link:"https://github.com/KaushalNaresh/Genomics"
+    },
+    {
+        name: "US Politics: A Data-Driven Analysis of Sentiment, Demography and Media in US poltics",
+        timeline:"Jan 2024 - Mar 2024",
+        skills: "Python, Selenium, JavaScript, Web Scraping, API",
+        description:{
+            "Conducted Comprehensive Sentiment Analysis": " Spearheaded a detailed sentiment analysis leveraging Reddit comments from all 50 states on critical national issues, including the economy, healthcare, and political policies. Integrated U.S. Census Bureau demographic data for a nuanced regression analysis, illuminating the complex interplay between public sentiment and demographic variables.",
+            "Advanced Media Bias and Framing Exploration": " Investigated media influence on public opinion by analyzing language patterns and framing within news articles from diverse political spectrums. Employed innovative data acquisition techniques, including web scraping and sentiment analysis tools, to assess media portrayal of divisive topics and its impact on societal discourse.",
+            "Developed Interactive Data Visualizations": " Designed and implemented interactive Dash applications to visualize the correlation between public sentiment on national issues and demographic factors, and to explore media's role in shaping public opinion. Utilized advanced data visualization techniques to present complex data sets clearly and engagingly, facilitating deeper insights into the dynamics of American political discourse."
+        },
+        logo:"USPolitics",
+        link:"https://github.com/KaushalNaresh/US_Politics"
     }
     // {
     //     name: "Genre Classification using LSTM",

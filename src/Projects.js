@@ -8,6 +8,7 @@ import Btech from './images/Btech.gif';
 import Genre from './images/Genre.gif';
 import Covid from './images/covid.gif';
 import Icd from './images/ICD.png';
+import USPolitics from './images/USPolitics.gif';
 import ProjectModal from './ProjectModal';
 import { useState } from 'react';
 import {IoIosArrowDropdown, IoIosArrowDropup} from "react-icons/io";
@@ -32,7 +33,8 @@ function Projects() {
                  'Netflix': Netflix,
                  'Genre': Genre,
                  'Covid': Covid,
-                 'Icd': Icd};
+                 'Icd': Icd,
+                 'USPolitics': USPolitics};
   return (
     <div className='projects' id="projects">
         <h1>Projects</h1>

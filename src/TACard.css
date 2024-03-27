@@ -1,0 +1,195 @@
+.TACard{
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 13.330px);
+    background-color: #2f2f2f;
+    color: white;
+    border-radius: 10px;
+    /* transition: transform 0.3s ease; */
+    /* flex-grow: 1; */
+}
+
+/* .TACard:hover{
+    transform: scale(1.05);
+    z-index: 4
+} */
+
+.TACard__img{
+    background-size: 100% 13em;
+    height: 13em;
+    background-repeat: no-repeat;
+    /* cursor: pointer; */
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.TACard__shade{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(
+        180deg, 
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}
+
+.TACard__description{
+    font-size: 14px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: auto
+}
+
+.TACard__name{
+    color: #46d369;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.TACard__timeline{
+    margin-bottom: 1em;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #777;
+    margin-right: auto;
+    padding: 2px;
+    display: flex;
+    /* flex: 0.75; */
+}
+
+/* .activityCard__skills{
+    font-weight: 200;
+    margin-bottom: 1em;
+} */
+
+.TACard__info{
+    line-height: 1.5em;
+    color: #d2d2d2;
+    overflow-wrap: break-word;;
+}
+
+/* .activityCard__info ul{
+    text-align: justify;
+    padding-left: 15px;
+} */
+
+/* .activityCard__playButton{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 50px;
+} */
+
+/* .activityCard__playButton:hover{
+    opacity: 1;
+} */
+
+/* .activityCard__info li span{
+    font-weight: 800;
+    color: white;
+} */
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .TACard__name{
+        font-size: 15px;
+    }
+    .TACard__timeline{
+        font-size: 12px;
+    }
+    .TACard__skills{
+        font-size: 12px;
+    }
+    .TACard__info{
+        font-size: 12px;
+    }
+    /* .TACard__playButton{
+        opacity: 1;
+        font-size: 25px;
+    } */
+}
+
+@media (max-width: 812px) {
+    .TACard{
+        width: 100%;
+    }
+    .TACard__name{
+        font-size: 11px;
+    }
+    .TACard__timeline{
+        font-size: 11px;
+    }
+    .TACard__skills{
+        font-size: 11px;
+    }
+    .TACard__info{
+        font-size: 11px;
+    }
+    /* .TACard__playButton{
+        opacity: 1;
+        font-size: 25px;
+    }
+    .TACard:hover{
+        transform: scale(1);
+    } */
+}
+
+/* .activityCard__row1{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+} */
+
+.TACard__showMore__button{
+    cursor: pointer;
+    color:#9e9c9c;
+    font-size: 25px;
+    z-index: 2;
+    justify-content: flex-start;
+    display: flex;
+    /* margin-right: 20px; */
+}
+
+.TACard__showMore__button:hover{
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.TACard__showMore__button::after {
+    content: "More info";
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 105%; /* Position it just above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: opacity 0.3s ease-in-out;
+    font-size: 16px;
+}
+  
+.TACard__showMore__button:hover::after {
+    visibility: visible;
+    opacity: 1;
+}

@@ -6,6 +6,7 @@ import Btech from './images/Btech.gif';
 import Genre from './images/Genre.gif';
 import Covid from './images/covid.gif';
 import Icd from './images/ICD.png';
+import USPolitics from './images/USPolitics.gif';
 import {BsPlayCircle} from "react-icons/bs"
 
 const ProjectModal = ({ isOpen, onClose, projData }) => {
@@ -15,7 +16,8 @@ const logos = {'Omdena': Omdena,
     'Netflix': Netflix,
     'Genre': Genre,
     'Covid': Covid,
-    'Icd': Icd
+    'Icd': Icd,
+    'USPolitics': USPolitics
 };
     
 
