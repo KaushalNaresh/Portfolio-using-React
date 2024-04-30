@@ -8,7 +8,7 @@ export const education = [
         department: "Computer Science",
         address: "Davis, California",
         timeline: "Sep 2022 - Apr 2024",
-        gpa: "3.92",
+        gpa: "3.93",
         courses: ["Advanced Data Structures and Algorithms", "Software Development", "Machine learning and Discovery", "Advance Statistical Computing", "Computer And Information Security"],
         skills: "Machine Learning, Signal Processing, Python programming",
         achievements: ["Selected as part-time graduate student researcher under Prof. Lee Miller in Nueroscience department at Center for Mind and Brain"],
@@ -40,57 +40,56 @@ export const education = [
 
 export const work_experiences = [
     {
-        name:"Indian Student Association @ UC Davis",
-        role:"Software Engineer (Part-time)",
+        name:"University of California Davis",
+        role:"Software Developer - Part Time",
         skills:"React.js, Node.js, Express.js, MongoDB, CSS, GitHub",
         address:"Davis, California",
-        timeline:"Nov 2023 – Present",
+        timeline:"Nov 2023 - Present",
         website:"https://github.com/KaushalNaresh/Indian_Davis_Community",
         description:{
-            "Indian Community @ Davis (ICD) web platform":" Co-founded and leading the development of full-stack web application using React.js, MongoDB and Node.js aimed at enhancing academic and social experience of Indian student community at UC Davis.",
-            "Features": " Implemented features like housing/roommate finder with dynamic matching algorithm; and currently working on event calendar and tailored recommendations.",
-            "API design":" Designed secure and efficient RESTful APIs on the backend using Node.js capable of fetching huge amount of data with minimal response time"
+            "Indian Community @ Davis (ICD) web platform":" Co-founded and leading the development of open source full-stack web application using React.js, MongoDB and Node.js aimed at enhancing academic and social experience of student community at UC Davis.",
+            "Features": " Engineered the frontend UI/UX design for dashboard and roommate finder feature using React.js and CSS; currently developing an integrated event calendar and a personalized recommendation system",
+            "API design":" Designed secure, efficient RESTful APIs with Node.js and Express.js for backend, ensuring compliance with industry security standards and optimizing data retrieval for minimal response times."
         },
         logo:"icd" 
     },
     {
         name:"Center for Mind and Brain",
-        role:"Graduate Student Researcher",
+        role:"Machine Learning Researcher - Part Time",
         skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
         address:"Davis, California",
         timeline:"Apr 2022 - Present",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Leading ongoing research at Center For Mind And Brain as Machine Learning Researcher to develop a non-invasive multimodal silent speech interface (SSI) for patients with Dysarthria",
-            "Methodology and Achievements":" Engineered an advanced supervised learning model that synthesizes speech by integrating sEMG and visual cues, employing a novel combination of CNN-RNN and attention-based Seq-to-Seq architectures, achieving a 35% WER",
-            "Future Works ":" Working to incorporate multimodal strategy combining sEMG signals, audio, and video (lipreading) to reduce the phoneme confusions and improve WER"
+            "Silent Speech Interface":" Led a cross-functional team in the development of a machine learning model using CNN, attention, transformers and seq-to-seq techniques to generate speech in patients with speech disorders achieving 85% accuracy",
+            "Managed the coordination":" of clinical trials involving laryngectomy patients, implementing python scripts for accurate recording and synchronization of sEMG signals, enhancing data integrity and trial efficiency",
         },
         logo:"cmb"
     },
     {
         name:"WOAS Technology Pvt. Ltd.",
-        role:"Associate Product Engineer",
+        role:"Full Stack Developer - Full Time",
         skills:"Java, Spring Framework, JavaScript, CSS, MySQL, HTML",
         address:"Bangalore, India",
         timeline:"Jun 2021 – Apr 2022",
         website:"https://wooqer.com",
         description:{
-            "Gallery for better Visual Experience":" Spearheaded a Scrum team in the development of an interactive gallery, leveraging Java and Spring MVC framework, which resulted in a 25% increase in user engagement and significantly improved the user interface’s responsiveness and interactivity.",
-            "Mobile Refresh Project": " Enhanced API development by designing and optimizing RESTful services, improving system efficiency by 30% and streamlining data retrieval processes.",
-            "Debugging":" Effectively resolved over 100+ product-related issues tracked in JIRA, leading to a 40% reduction in customer complaints and contributing to the product’s overall stability and reliability"
+            "Gallery for better Visual Experience":" Spearheaded the development of an interactive gallery, using Java, HTML and Spring MVC framework following Agile methodogies, that enabled users to pin feedback on images and send notifications; increasing customer engagement by 45%.",
+            "API development": " Architected new RESTful APIs for microservices using Java and optimized web APIs to enhance performance, achieving a 25% reduction in critical response times. Documented all API functionalities comprehensively using Swagger",
+            "Debugging and Documentation":" Managed end-to-end software development, using Jenkins for CI/CD pipelines, JIRA to resolve 100+ bugs, and JUnit for unit testing, enhancing product stability and customer service satisfaction."
         },
         logo:"wooqer"
     },
     {
         name:"Planful",
-        role:"Software Developer Engineer - 1 Intern",
+        role:"Software Developer Engineer - 1 Co-Op",
         skills:"C#, MySQL, Git, Object Oriented Programming",
         address:"Hyderabad, India",
         timeline:"June 2020 – Dec 2020",
         website:"https://planful.com",
         description:{
             "Data quality assessment tool ": " Developed a .NET console application in C# and integrated it with MySQL to automate anomaly detection in financial data, enhancing data accuracy and reducing prediction errors in financial planning models by 40%",
-            "Debugging ":" Collaborated with senior developers to debug code using NUnit framework, resolving 30+ pending issues on JIRA and documented code for future KT sessions"
+            "Debugging ":" Collaborated with senior developers on code review and debugging using the NUnit framework, resolving over 30 issues tracked in JIRA. Documented code in Confluence to streamline knowledge transfer"
         },
         logo:"planful"
     },
@@ -207,11 +206,11 @@ export const teaching_experiences = [
 
 export const languages = [
     {
-        name: 'French 021 (Intermediate Level - B1)',
-        logo: 'FRE021'
+        name: 'French - B1 Intermediate Level',
+        logo: 'FRE021',
     },
     {
-        name: 'French 003 (Basic Level - A2)',
+        name: 'French - A2 Elementary Level',
         logo: 'FRE01'
     },
     {
