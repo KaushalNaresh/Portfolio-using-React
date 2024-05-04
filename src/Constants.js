@@ -54,14 +54,14 @@ export const work_experiences = [
         logo:"icd" 
     },
     {
-        name:"Center for Mind and Brain",
+        name:"Center for Mind and Brain (Collaborating with Accenture)",
         role:"Machine Learning Researcher - Part Time",
         skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
         address:"Davis, California",
         timeline:"Apr 2022 - Present",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Led a cross-functional team in the development of a machine learning model using CNN, attention, transformers and seq-to-seq techniques to generate speech in patients with speech disorders achieving 85% accuracy",
+            "Silent Speech Interface":" Led a cross-functional team in collaboration with Accenture to develop a machine learning model using CNN, attention, transformers and seq-to-seq techniques to generate speech in patients with speech disorders achieving 29% WER",
             "Managed the coordination":" of clinical trials involving laryngectomy patients, implementing python scripts for accurate recording and synchronization of sEMG signals, enhancing data integrity and trial efficiency",
         },
         logo:"cmb"
