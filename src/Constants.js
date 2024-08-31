@@ -7,7 +7,7 @@ export const education = [
         degree: "Master Of Science",
         department: "Computer Science",
         address: "Davis, California",
-        timeline: "Sep 2022 - Apr 2024",
+        timeline: "Sep 2022 - Jun 2024",
         gpa: "3.93",
         courses: ["Advanced Data Structures and Algorithms", "Software Development", "Machine learning and Discovery", "Advance Statistical Computing", "Computer And Information Security"],
         skills: "Machine Learning, Signal Processing, Python programming",
@@ -40,13 +40,26 @@ export const education = [
 
 export const work_experiences = [
     {
+        name: "Wayfair",
+        role: "Software Engineer - 1",
+        skills: "Python, GraphQl, PostgreSQL, TypeScript, Kibana, Kubernetes, Docker, Git, Datadog, Kafka, GCP",
+        address: "Austin, Texas",
+        timeline: "Jul 2024 - Present",
+        website: "https://www.wayfair.com/",
+        description: {
+            "Profit-Driven Feature Development":" Collaborated with the supply chain and retail tech team to engineer and deploy scalable features, utilizing Python, GraphQL, and TypeScript to streamline shipment lifecycle management. Our efforts enhanced operational efficiency and drove revenue growth through the strategic optimization of container handling timelines.",
+            "AI-Driven Solutions":" Developed an intelligent chatbot during a hackathon using Python and OpenAI API, integrated with Wayfair’s internal systems to facilitate new SDE onboarding, streamline shipment tracking via GraphQL queries, and automate CRUD operations through natural language processing and prompt engineering"
+        },
+        logo: "wayfair"
+    },
+    {
         name:"University of California Davis",
         role:"Software Developer - Part Time",
         skills:"React.js, Node.js, Express.js, MongoDB, CSS, GitHub",
         address:"Davis, California",
-        timeline:"Nov 2023 - Present",
+        timeline:"Nov 2023 - Jun 2024",
         website:"https://github.com/KaushalNaresh/Indian_Davis_Community",
-        description:{
+        description: {
             "Indian Community @ Davis (ICD) web platform":" Co-founded and leading the development of open source full-stack web application using React.js, MongoDB and Node.js aimed at enhancing academic and social experience of student community at UC Davis.",
             "Features": " Engineered the frontend UI/UX design for dashboard and roommate finder feature using React.js and CSS; currently developing an integrated event calendar and a personalized recommendation system",
             "API design":" Designed secure, efficient RESTful APIs with Node.js and Express.js for backend, ensuring compliance with industry security standards and optimizing data retrieval for minimal response times."
@@ -184,7 +197,7 @@ export const teaching_experiences = [
     {
         course_name: 'Data Visualization PSC12Y',
         timeline: "Apr 2024 - Jun 2024",
-        description: "In Progress....",
+        description: "As a Teaching Assistant for Data Visualization under Prof. Azra Jahanitabesh during the Spring quarter, I instructed students in data visualization techniques using MS Excel, helped them in interpreting various graph types, and introduced key concepts in inferential and descriptive statistics. Additionally, I supported the professor with grading, led lab sessions, and held office hours to assist students with coursework and projects.",
         logo: 'PSC12Y',
         link: 'https://catalog.ucdavis.edu/courses-subject-code/psc/'
     },

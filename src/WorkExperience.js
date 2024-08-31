@@ -6,6 +6,7 @@ import wooqer_logo from "./images/wooqer_logo_transparent.png";
 import planful_logo from "./images/planful_logo_transparent.png";
 import cmb_logo from "./images/cmb.jpeg";
 import Icd from './images/ICD.png';
+import wayfair_logo from "./images/wayfair_logo.jpg"
 import {IoIosArrowDropdown, IoIosArrowDropup} from "react-icons/io";
 
 function WorkExperience() {
@@ -17,7 +18,8 @@ function WorkExperience() {
     "wooqer": wooqer_logo,
     "planful": planful_logo,
     "cmb": cmb_logo,
-    "icd": Icd
+    "icd": Icd,
+    "wayfair": wayfair_logo
   }
 
   return (
@@ -38,7 +40,7 @@ function WorkExperience() {
                     webSite={workExp.website}/>
             ))
         }
-
+wa
         {
             Constants.work_experiences.length > workExCount && Constants.work_experiences.length > numOfVisWorkEx 
             ?    <>
