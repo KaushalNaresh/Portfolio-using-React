@@ -3,10 +3,10 @@ import './Banner.css';
 import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import useTypewriter from 'react-typewriter-hook';
-import profilePhoto from './images/personal_headshot.jpg'
+import profilePhoto from './images/personal_headshot.jpeg'
 import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
-import collageGIF from "./images/naresh_background.gif";
+import collageGIF from "./images/naresh_background.JPG";
 import staticImage from "./images/naresh_background.JPG";
 
 function Banner() {
@@ -39,7 +39,7 @@ function Banner() {
                     <span>(he/him)</span>
                 </h1>
                 <div className='banner__buttons'>
-                    <a href="mailto:nkkaushal@ucdavis.edu" className='banner__button'><MdEmail /></a>
+                    <a href="mailto:kaushalnaresh2689@gmail.com" className='banner__button'><MdEmail /></a>
                     <a href="https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub /></a>
                     <a href="https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin /></a>
                 </div>

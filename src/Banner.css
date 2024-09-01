@@ -18,8 +18,9 @@
     position: relative;
     color: white;
     object-fit: contain;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/naresh_background.gif');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/naresh_background.JPG');
     background-position: center;
+    background-size: 45% 100%;
     /* filter: blur(5px); */
 }
 
