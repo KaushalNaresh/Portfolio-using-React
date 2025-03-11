@@ -49,6 +49,7 @@ export const work_experiences = [
         description: {
             "Exception management system": " Developed an automated exception engine using Python, GraphQL, PostgreSQL, TypeScript to eliminate shipment issues with potential financial risk across microservices slashing service tickets by 75% and enhancing operational efficiency.",
             "Automated Exceptions": " Designed a Yacc and Lex-based parser to evaluate complex business rules, enabling automatic assignment of critical flags and exceptions across 35+ workflows and ensuring proactive issue resolution.",
+            "Track and Trace service ": " Enhanced tracking service using Python, Kafka and GCP capturing 90% shipment milestones in real time from API's and EDI services improving tracking accuracy by 15%",
             "Profit-Driven Feature Development":" Collaborated with the supply chain and retail tech team to engineer and deploy scalable features, utilizing Python, GraphQL, and TypeScript to streamline shipment lifecycle management. Our efforts enhanced operational efficiency and drove revenue growth tby 15%.",
             "AI-Driven Solutions":" Designed and developed an intelligent AI agent, using Python, TypeScript, graphQL and OpenAI API (LLMs), integrated with Wayfair's internal systems to automate basic CRUD operations, OCR on documents and streamline shipment tracking reducing manual workload."
         },
