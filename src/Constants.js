@@ -41,7 +41,7 @@ export const education = [
 export const work_experiences = [
     {
         name: "Wayfair",
-        role: "Software Engineer - 1",
+        role: "Software Engineer - Full Time",
         skills: "Python, GraphQl, PostgreSQL, TypeScript, Kibana, Kubernetes, Docker, Git, Datadog, Kafka, GCP",
         address: "Austin, Texas",
         timeline: "Jul 2024 - Mar 2025",
@@ -70,11 +70,11 @@ export const work_experiences = [
         logo:"icd" 
     },
     {
-        name:"Center for Mind and Brain (Collaborating with Accenture)",
+        name:"Center for Mind and Brain (In collaboration with Accenture)",
         role:"Machine Learning Researcher - Part Time",
         skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
         address:"Davis, California",
-        timeline:"Apr 2022 - Present",
+        timeline:"Apr 2022 - June 2024",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
             "Silent Speech Interface":" Led a cross-functional team in collaboration with Accenture to develop a machine learning model using CNN, attention, transformers and seq-to-seq techniques to generate speech in patients with speech disorders achieving 29% WER",
