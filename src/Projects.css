@@ -1,83 +1,132 @@
 .projects{
     margin: 0 5%;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 .projects > h1{
     color: white;
-    font-weight: bold;
-    font-size: 25px;
-    padding: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 40px 0;
+    padding: 0;
 }
 
 .projects__row{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 20px 20px;
-    border-bottom: 1px solid #404040;
-    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.projects__row.animating {
+    animation: cardExpand 0.3s ease;
+}
+
+.projects__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .projects__showMore__button{
     cursor: pointer;
-    color:#9e9c9c;
-    font-size: 50px;
-    z-index: 2;
+    background: none;
+    border: none;
+    color: #9e9c9c;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+    padding: 0;
 }
 
-.projects__showMore{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 1.5em;
-    z-index: 2;
-}
-
-.dropdown__button{
-    z-index: 1;
-}
-
-.projects__showMore__button:hover{
+.projects__showMore__button:hover {
     color: white;
 }
 
+.projects__showMore__button span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.projects__showMore{
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.projects__showMore__button:hover .projects__showMore {
+    transform: translateY(4px);
+}
+
+.projects__showMore__button:hover span {
+    transform: translateY(2px);
+}
+
 .projects--fadeButton{
-    bottom: 6.3em;
     position: absolute;
-    height: 7.4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
     background-image: linear-gradient(
         180deg, 
         transparent,
-        rgba(37,37,37,0.61),
-        #111
+        rgba(20, 20, 20, 0.8),
+        #141414
     );
     z-index: 1;
-    width: 100%;
+    pointer-events: none;
+}
+
+@keyframes cardExpand {
+    0% {
+        opacity: 0.8;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Media query for smaller screens */
 @media (max-width: 1024px) {
     .projects > h1{
-        font-size: 18px;
+        font-size: 1.75rem;
+        margin: 30px 0;
     }
-    .projects__showMore{
-        font-size: 25px;
-        margin-bottom: 2.0em;
+    .projects__showMore {
+        font-size: 1.75rem;
+    }
+    .projects__showMore__button span {
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 812px) {
+    .projects {
+        margin: 0 20px;
+    }
     .projects > h1{
-        font-size: 15px;
+        font-size: 1.5rem;
+        margin: 20px 0;
     }
     .projects__row{
-        flex-direction: column;
+        gap: 15px;
     }
-    .projects__showMore{
-        font-size: 25px;
-        margin-bottom: 2em;
+    .projects__showMore {
+        font-size: 1.5rem;
+    }
+    .projects__showMore__button span {
+        font-size: 0.8rem;
+    }
+    .projects--fadeButton {
+        height: 100px;
     }
 }

@@ -1,159 +1,248 @@
-.TACard{
-    margin: 0 0 20px 0;
-    display: flex;
-    flex-direction: column;
-    width: calc(33.33% - 13.330px);
-    background-color: #2f2f2f;
-    color: white;
-    border-radius: 10px;
-    /* transition: transform 0.3s ease; */
-    /* flex-grow: 1; */
-}
-
-/* .TACard:hover{
-    transform: scale(1.05);
-    z-index: 4
-} */
-
-.TACard__img{
-    background-size: 100% 13em;
-    height: 13em;
-    background-repeat: no-repeat;
-    /* cursor: pointer; */
+.TACard {
+    flex: 1 1 calc(33.333% - 20px); /* Equal width distribution for 3 cards */
+    margin: 0 10px 20px;
+    min-width: 250px; /* Reduced min-width to allow better distribution */
+    max-width: none; /* Remove max-width constraint */
+    background: #141414;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
     position: relative;
-    border-radius: 5px 5px 5px 5px;
 }
 
-.TACard__shade{
+.TACard:hover, .TACard.hovered {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: #1a1a1a;
+}
+
+.TACard__img-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.TACard__img {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.TACard:hover .TACard__img {
+    transform: scale(1.1);
+}
+
+.TACard__overlay {
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    top: 0;
-    background-image: linear-gradient(
-        180deg, 
-        transparent,
-        rgba(37,37,37,0.61),
-        #111
+    background: linear-gradient(
+        180deg,
+        transparent 10%,
+        rgba(20, 20, 20, 0.7) 60%,
+        rgba(20, 20, 20, 0.95) 100%
     );
-}
-
-.TACard__description{
-    font-size: 14px;
-    padding: 15px;
     display: flex;
-    flex-direction: column;
-    height: auto
-}
-
-.TACard__name{
-    color: #46d369;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    font-size: 16px;
-    text-align: justify;
-}
-
-.TACard__timeline{
-    margin-bottom: 1em;
-    color: white;
-    font-weight: 500;
-    border: 1px solid #777;
-    margin-right: auto;
-    padding: 2px;
-    display: flex;
-    /* flex: 0.75; */
-}
-
-/* .activityCard__skills{
-    font-weight: 200;
-    margin-bottom: 1em;
-} */
-
-.TACard__info{
-    line-height: 1.5em;
-    color: #d2d2d2;
-    overflow-wrap: break-word;;
-}
-
-/* .activityCard__info ul{
-    text-align: justify;
-    padding-left: 15px;
-} */
-
-/* .activityCard__playButton{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
     align-items: center;
     justify-content: center;
-    display: flex;
     opacity: 0;
-    transition: 0.3s;
-    font-size: 50px;
-} */
+    transition: opacity 0.3s ease;
+}
 
-/* .activityCard__playButton:hover{
+.TACard:hover .TACard__overlay {
     opacity: 1;
-} */
+}
 
-/* .activityCard__info li span{
-    font-weight: 800;
+.TACard__play-icon {
+    font-size: 50px;
     color: white;
-} */
+}
 
-/* Media query for smaller screens */
+.TACard__content {
+    padding: 20px;
+    color: white;
+}
+
+.TACard__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: white;
+}
+
+.TACard__timeline {
+    display: flex;
+    align-items: center;
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.TACard__info {
+    color: #d4d4d4;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+    hyphens: auto;
+    position: relative;
+}
+
+.TACard__info p {
+    margin: 0;
+    text-align: justify;
+    overflow: hidden;
+    position: relative;
+}
+
+.TACard__info.truncated p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.TACard__info__toggle {
+    color: #e50914;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 8px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.TACard__info__toggle:hover {
+    color: #ff0f1f;
+    text-decoration: underline;
+}
+
+.TACard__info ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.TACard__info li {
+    margin-bottom: 0;
+    position: relative;
+    padding: 6px 12px;
+    background: rgba(229, 9, 20, 0.15);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Special styling for language items */
+.TACard__info li:hover {
+    background: rgba(229, 9, 20, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(229, 9, 20, 0.2);
+}
+
+.TACard__info li::before {
+    content: "•";
+    color: #e50914;
+    font-size: 1.2em;
+    line-height: 1;
+    display: inline;
+}
+
+.TACard__info strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-right: 0;
+}
+
+/* Add a subtle glow effect on hover */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 0 rgba(229, 9, 20, 0.2);
+    }
+    to {
+        box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+    }
+}
+
+.TACard__info li:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Responsive adjustments for language tags */
 @media (max-width: 1024px) {
-    .TACard__name{
-        font-size: 15px;
+    .TACard__info li {
+        padding: 4px 10px;
+        font-size: 0.8rem;
     }
-    .TACard__timeline{
-        font-size: 12px;
-    }
-    .TACard__skills{
-        font-size: 12px;
-    }
-    .TACard__info{
-        font-size: 12px;
-    }
-    /* .TACard__playButton{
-        opacity: 1;
-        font-size: 25px;
-    } */
 }
 
 @media (max-width: 812px) {
-    .TACard{
-        width: 100%;
+    .TACard__info li {
+        padding: 3px 8px;
+        font-size: 0.75rem;
     }
-    .TACard__name{
-        font-size: 11px;
-    }
-    .TACard__timeline{
-        font-size: 11px;
-    }
-    .TACard__skills{
-        font-size: 11px;
-    }
-    .TACard__info{
-        font-size: 11px;
-    }
-    /* .TACard__playButton{
-        opacity: 1;
-        font-size: 25px;
-    }
-    .TACard:hover{
-        transform: scale(1);
-    } */
 }
 
-/* .activityCard__row1{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-} */
+/* Adjust spacing for different content types */
+.TACard__info p + ul,
+.TACard__info ul + p {
+    margin-top: 15px;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+    .TACard {
+        min-width: 250px;
+    }
+    
+    .TACard__name {
+        font-size: 1.2rem;
+    }
+    
+    .TACard__info {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 812px) {
+    .TACard {
+        min-width: 200px;
+    }
+    
+    .TACard__name {
+        font-size: 1rem;
+    }
+    
+    .TACard__info {
+        font-size: 0.8rem;
+    }
+    
+    .TACard__play-icon {
+        font-size: 40px;
+    }
+}
 
 .TACard__showMore__button{
     cursor: pointer;
@@ -170,7 +259,6 @@
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
-
 
 .TACard__showMore__button::after {
     content: "More info";

@@ -1,27 +1,94 @@
-.LangCard{
-    margin: 0 0 20px 0;
-    display: flex;
-    flex-direction: column;
-    width: calc(20% - 16px);
-    background-color: #2f2f2f;
-    color: white;
-    border-radius: 10px;
-    /* transition: transform 0.3s ease; */
-    /* flex-grow: 1; */
+.LangCard {
+    background: #141414;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    position: relative;
 }
 
-/* .TACard:hover{
+.LangCard:hover {
     transform: scale(1.05);
-    z-index: 4
-} */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: #1a1a1a;
+}
 
-.LangCard__img{
-    background-size: 100% 13em;
-    height: 13em;
-    background-repeat: no-repeat;
-    /* cursor: pointer; */
+.LangCard__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.LangCard__icon-wrapper {
+    width: 120px;
+    height: 120px;
     position: relative;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    padding: 15px;
+}
+
+.LangCard:hover .LangCard__icon-wrapper {
+    transform: translateY(-5px);
+}
+
+.LangCard__img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.LangCard__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.LangCard__name {
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.LangCard__proficiency {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+    .LangCard__icon-wrapper {
+        width: 100px;
+        height: 100px;
+        padding: 12px;
+    }
+    
+    .LangCard__name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 812px) {
+    .LangCard__icon-wrapper {
+        width: 90px;
+        height: 90px;
+        padding: 10px;
+    }
+    
+    .LangCard__name {
+        font-size: 0.9rem;
+    }
 }
 
 .LangCard__shade{
@@ -44,14 +111,6 @@
     display: flex;
     flex-direction: column;
     height: auto
-}
-
-.LangCard__name{
-    color: #46d369;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    font-size: 16px;
-    text-align: center;
 }
 
 .LangCard__timeline{
@@ -103,32 +162,6 @@
     font-weight: 800;
     color: white;
 } */
-
-/* Media query for smaller screens */
-@media (max-width: 1024px) {
-    .LangCard__name{
-        font-size: 15px;
-    }
-    .LangCard__info{
-        font-size: 12px;
-    }
-    /* .TACard__playButton{
-        opacity: 1;
-        font-size: 25px;
-    } */
-}
-
-@media (max-width: 812px) {
-    .LangCard{
-        width: 100%;
-    }
-    .LangCard__name{
-        font-size: 11px;
-    }
-    .LangCard__info{
-        font-size: 11px;
-    }
-}
 
 /* .activityCard__row1{
     display: flex;

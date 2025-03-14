@@ -26,7 +26,7 @@ export const education = [
         gpa: "9.17",
         courses: ["Data Structures", "Design and Analysis Of Algorithms", "Combinatorial Optimizations", "Operating System", "Computer Architecture", "Introduction To Programming", "Linear Algebra", "Differential Equations", "Multivariate Calculus", "Data Analytics", "Numerical Analysis", "Machine Learning", "Artifical Intelligence"],
         achievements: ["Institute Bronze medal for second rank in CSE 2017 Batch"],
-        skills: "C++, Java, Python, HTML5, CSS, Machine Learning, Linear Algenra, Threading",
+        skills: "C++, Java, Python, HTML5, CSS, Machine Learning, Linear Algebra, Threading",
         extracurricular: {
             "Sectretary IEEE Student Branch": "Assisted in organizing and planning various technical and non-technical events, workshops, and seminars, enhancing the professional and technical skills of members which lead significant growth in mebership",
             "Coding Club Core Member": "Collaborated as an integral member of the core team in managing and directing the activities of the Student's Coding Club in the planning, organization, and execution of coding workshops, hackathons, and competitive coding events among several new and old IIT's, promoting a culture of innovation and technical excellence.",
@@ -179,20 +179,6 @@ export const work_experiences = [
     //     },
     //     logo:"planful"
     // },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
     
 ];
 
@@ -222,39 +208,50 @@ export const teaching_experiences = [
 
 export const languages = [
     {
-        name: 'French - B1 Intermediate Level',
-        logo: 'FRE021',
-    },
-    {
-        name: 'French - A2 Elementary Level',
-        logo: 'FRE01'
-    },
-    {
         name: 'English',
-        logo: 'ENG'
+        logo: 'ENG',
+        proficiency: 'Proficient'
     },
     {
-        name: 'Punjabi',
-        logo: 'PUN'
+        name: 'French',
+        logo: 'FRE021',
+        proficiency: 'Intermediate'
     },
     {
         name: 'Hindi',
-        logo: 'HIN'
+        logo: 'HIN',
+        proficiency: 'Proficient'
+    },
+    {
+        name: 'Punjabi',
+        logo: 'PUN',
+        proficiency: 'Proficient'
     }
 ]
 
+export const introduction = {
+    greeting: "Hey, I'm Naresh — a software engineer, AI enthusiast, and problem-solver who loves tackling complex challenges with smart, scalable solutions.",
+    paragraphs: [
+        "At Wayfair, I've built micro-services from scratch that capture 90% of shipment milestones in real-time improving tracking accuracy by 15% and automating 35+ critical exception-handling workflows by designing Parser to evaluate business rules, significantly reducing manual workload. Additionally, I've developed an AI-powered assistant leveraging Large Language Models (LLMs) to automate tasks such as extracting information from documents and querying databases for real-time container statuses, further enhancing operational efficiency. My experience spans backend (Python, Java, GraphQL, PostgreSQL), frontend (TypeScript, React), and infrastructure (Kafka, Docker, Kubernetes), providing a versatile foundation in full-stack software development.",
+        "Beyond core engineering, I'm passionate about AI and LLMs. I'm currently building a personal AI assistant using Python, LangGraph, LangChain, and OpenAI's APIs, automating tasks such as scheduling, email handling, and document processing. Previously, I led research at UC Davis developing a multimodal speech synthesis model using transformers, achieving a 29% word-error rate reduction for patients with speech impairments.",
+        "With a Master's in Computer Science from UC Davis and a B.Tech from IIT Goa, I thrive at the intersection of software engineering, AI, and automation. Whether it's architecting robust backend systems, building user-facing applications, or pushing the boundaries of AI, I'm always excited to take on impactful challenges."
+    ],
+    connect: "🚀 Let's connect and chat about AI, software engineering, and the future of intelligent systems!"
+};
+
 export const activities = [
-    // {
-    //     name: "Indian Community at Davis",
-    //     timeline: "Dec 2023 - Present",
-    //     skills: "React.js, MongoDB, Express, Node.js, CSS",
-    //     description:{
-    //         "Spearheaded":" the creation of a MERN stack-based web application for UC Davis' Indian student community, focusing on cultural integration, sharing recources and community events",
-    //         "Implementing":" AI-driven content curation like finding compatible roommate, housing options and sending real-time updates, catering to the dynamic needs of the student community and fostering a connected campus experience.",
-    //     },
-    //     logo:"Icd",
-    //     link:"https://github.com/KaushalNaresh/Indian_Davis_Community"
-    // },
+    {
+        name: "US Politics: A Data-Driven Analysis of Sentiment, Demography and Media in US poltics",
+        timeline:"Jan 2024 - Mar 2024",
+        skills: "Python, Selenium, JavaScript, Web Scraping, API",
+        description:{
+            "Conducted Comprehensive Sentiment Analysis": " Spearheaded a detailed sentiment analysis leveraging Reddit comments from all 50 states on critical national issues, including the economy, healthcare, and political policies. Integrated U.S. Census Bureau demographic data for a nuanced regression analysis, illuminating the complex interplay between public sentiment and demographic variables.",
+            "Advanced Media Bias and Framing Exploration": " Investigated media influence on public opinion by analyzing language patterns and framing within news articles from diverse political spectrums. Employed innovative data acquisition techniques, including web scraping and sentiment analysis tools, to assess media portrayal of divisive topics and its impact on societal discourse.",
+            "Developed Interactive Data Visualizations": " Designed and implemented interactive Dash applications to visualize the correlation between public sentiment on national issues and demographic factors, and to explore media's role in shaping public opinion. Utilized advanced data visualization techniques to present complex data sets clearly and engagingly, facilitating deeper insights into the dynamics of American political discourse."
+        },
+        logo:"USPolitics",
+        link:"https://github.com/KaushalNaresh/US_Politics"
+    },
     {
         name: "Personal Portfolio",
         timeline: "Dec 2022 - Present",
@@ -262,7 +259,6 @@ export const activities = [
         description:{
             "Designed":" a personal portfolio web application with a Netflix-inspired UI/UX, utilizing React.js and CSS demonstrating skills in modern web technologies and user-centric design",
             "Link": " https://resume-c79a2.web.app",
-            
         },
         logo:"Netflix",
         link:"https://github.com/KaushalNaresh/naresh-kumar-kaushal-resume"
@@ -314,112 +310,5 @@ export const activities = [
         },
         logo:"Btech",
         link:"https://github.com/KaushalNaresh/Genomics"
-    },
-    {
-        name: "US Politics: A Data-Driven Analysis of Sentiment, Demography and Media in US poltics",
-        timeline:"Jan 2024 - Mar 2024",
-        skills: "Python, Selenium, JavaScript, Web Scraping, API",
-        description:{
-            "Conducted Comprehensive Sentiment Analysis": " Spearheaded a detailed sentiment analysis leveraging Reddit comments from all 50 states on critical national issues, including the economy, healthcare, and political policies. Integrated U.S. Census Bureau demographic data for a nuanced regression analysis, illuminating the complex interplay between public sentiment and demographic variables.",
-            "Advanced Media Bias and Framing Exploration": " Investigated media influence on public opinion by analyzing language patterns and framing within news articles from diverse political spectrums. Employed innovative data acquisition techniques, including web scraping and sentiment analysis tools, to assess media portrayal of divisive topics and its impact on societal discourse.",
-            "Developed Interactive Data Visualizations": " Designed and implemented interactive Dash applications to visualize the correlation between public sentiment on national issues and demographic factors, and to explore media's role in shaping public opinion. Utilized advanced data visualization techniques to present complex data sets clearly and engagingly, facilitating deeper insights into the dynamics of American political discourse."
-        },
-        logo:"USPolitics",
-        link:"https://github.com/KaushalNaresh/US_Politics"
     }
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },
-    // {
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // },{
-    //     name: "Genre Classification using LSTM",
-    //     timeline: "Oct 2022 - Dec 2022",
-    //     skills: "Python, signal processing, LSTM, Keras, CNN",
-    //     description: {
-    //         "Implemented":" the research paper published on IEEE:https://ieeexplore.ieee.org/document/9449177",
-    //         "Compared": " results with 1D CNN, 2D CNN, KNN and SVM where LSTM outperforms all these algorithms.",
-    //         "Accuracy": " Achieved an accuracy of around 88-90% with LSTM layer on top of KNN and SVM which is almost 120% increase when KNN or SVM were used alone."
-    //     },
-    //     logo:"Genre",
-    //     link:"https://github.com/KaushalNaresh/Genre_Classification_Of_Songs/tree/LSTM"
-    // }
 ];

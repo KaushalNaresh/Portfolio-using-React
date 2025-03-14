@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../Banner'
 import Nav from '../Nav'
+import Introduction from '../Introduction'
 import Education from '../Education'
 import WorkExperience from '../WorkExperience'
 import Projects from '../Projects'
@@ -13,6 +14,7 @@ function HomeScreen() {
     <div className='homeScreen'>
         <Nav />
         <Banner />
+        <Introduction />
         <Education />
         <WorkExperience />
         <TeachingExperience/>

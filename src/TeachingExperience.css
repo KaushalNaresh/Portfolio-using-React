@@ -1,83 +1,84 @@
 .ta{
     margin: 0 5%;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 .ta > h1{
     color: white;
-    font-weight: bold;
     font-size: 25px;
+    margin-top: 50px;
     padding: 0 0 20px 0;
 }
 
 .ta__row{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 20px 20px;
-    border-bottom: 1px solid #404040;
-    flex-direction: row;
+    margin: 0 -10px;
+    width: 100%; /* Full width */
+    position: relative;
+    justify-content: space-between; /* Distribute space between cards */
 }
 
 .ta__showMore__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     cursor: pointer;
-    color:#9e9c9c;
-    font-size: 50px;
+    color: #9e9c9c;
+    position: relative;
+    margin-top: -22px;
+    transition: color 0.3s ease;
+    padding: 0;
+    height: 0;
     z-index: 2;
-}
-
-.ta__showMore{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 1.5em;
-    z-index: 2;
-}
-
-.dropdown__button{
-    z-index: 1;
 }
 
 .ta__showMore__button:hover{
     color: white;
 }
 
+.ta__showMore{
+    position: relative;
+    font-size: 50px;
+    background: #141414;
+    padding: 0 10px;
+}
+
 .ta--fadeButton{
-    bottom: 6.3em;
     position: absolute;
-    height: 7.4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
     background-image: linear-gradient(
         180deg, 
         transparent,
-        rgba(37,37,37,0.61),
-        #111
+        rgba(20, 20, 20, 0.8),
+        #141414
     );
-    z-index: 1;
-    width: 100%;
+    pointer-events: none;
+    margin-bottom: -20px;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 1024px) {
     .ta > h1{
         font-size: 18px;
+        margin-top: 50px;
     }
     .ta__showMore{
-        font-size: 25px;
-        margin-bottom: 2.0em;
+        font-size: 35px;
     }
 }
 
 @media (max-width: 812px) {
     .ta > h1{
         font-size: 15px;
-    }
-    .ta__row{
-        flex-direction: column;
+        margin-top: 25px;
     }
     .ta__showMore{
-        font-size: 25px;
-        margin-bottom: 2em;
+        font-size: 30px;
     }
 }

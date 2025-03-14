@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ProjectModal.css';
 import Omdena from './images/Omdena.gif';
 import Netflix from './images/Netflix.gif';
@@ -7,57 +7,95 @@ import Genre from './images/Genre.gif';
 import Covid from './images/covid.gif';
 import Icd from './images/ICD.png';
 import USPolitics from './images/USPolitics.gif';
-import {BsPlayCircle} from "react-icons/bs"
+import { BsPlayCircle } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 const ProjectModal = ({ isOpen, onClose, projData }) => {
+    const logos = {
+        'Omdena': Omdena,
+        'Btech': Btech,
+        'Netflix': Netflix,
+        'Genre': Genre,
+        'Covid': Covid,
+        'Icd': Icd,
+        'USPolitics': USPolitics
+    };
 
-const logos = {'Omdena': Omdena,
-    'Btech': Btech,
-    'Netflix': Netflix,
-    'Genre': Genre,
-    'Covid': Covid,
-    'Icd': Icd,
-    'USPolitics': USPolitics
-};
-    
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') onClose();
+        };
 
-  if (!isOpen) return null;
+        if (isOpen) {
+            document.addEventListener('keydown', handleEscape);
+            document.body.style.overflow = 'hidden';
+        }
 
-  return (
-    <>
-        <div className="project-modal-overlay" onClick={onClose} />
-        <div className="project-modal">
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen, onClose]);
 
-            <button className="project-modal-close" onClick={onClose}>&times;</button>
-            <a href={projData.link}>
-                <div className="project-modal-img-banner">
-                    <img src = {logos[projData.logo]}></img>
-                    <div className="project-modal-project-overlay"></div>
-                    <div className='project-activityCard__playButton'><BsPlayCircle color='white'/></div>
-                </div>
-            </a>
-            <h1 className="project-modal-project-name">{projData?.name}</h1>
-            <div className='project-modal-project__details'>
-                <div className='project-modal-project__info'>
-                    <span><strong>Skills:</strong> {projData?.skills}</span>
-                </div>
-                <div className='project-modal-project__timeline'>
-                    <div>{projData?.timeline}</div>
+    if (!isOpen) return null;
+
+    const skillsList = projData?.skills ? projData.skills.split(', ') : [];
+
+    return (
+        <>
+            <div className="project-modal-overlay" onClick={onClose}>
+                <div className="project-modal" onClick={e => e.stopPropagation()}>
+                    <button className="project-modal-close" onClick={onClose}>
+                        <IoClose />
+                    </button>
+
+                    <div className="project-modal-img-banner">
+                        <img src={logos[projData.logo]} alt={projData.name} />
+                        <div className="project-modal-project-overlay"></div>
+                        {projData.link && (
+                            <a 
+                                href={projData.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="project-modal-github-link"
+                            >
+                                <FaGithub />
+                                <span>View on GitHub</span>
+                            </a>
+                        )}
+                    </div>
+
+                    <div className="project-modal-content">
+                        <div className="project-modal-header">
+                            <h1 className="project-modal-project-name">{projData?.name}</h1>
+                            <div className="project-modal-project-timeline">{projData?.timeline}</div>
+                        </div>
+
+                        <div className="project-modal-skills">
+                            {skillsList.map((skill, index) => (
+                                <span key={index} className="project-modal-skill-tag">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+
+                        <div className="project-modal-description">
+                            <h3>Description</h3>
+                            <ul>
+                                {Object.entries(projData?.description || {}).map(([role, description], index) => (
+                                    <li key={index}>
+                                        <strong>{role}:</strong>
+                                        <p>{description}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-           
-            <div className='project-modal-project__description'>
-                <h3>Description</h3>
-                <ul>
-                    {Object.entries(projData?.description).map(([role, description], index) => (
-                        <li key={index}><strong>{role}:</strong> {description}</li>
-                    ))}
-                </ul>
-            </div>
-        
-        </div>
-    </>
-  );
+        </>
+    );
 };
 
 export default ProjectModal;

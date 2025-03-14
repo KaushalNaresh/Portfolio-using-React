@@ -1,11 +1,28 @@
 .WorkEx__wrapper{
-    border-top: 1px solid #404040;
-    border-bottom: 1px solid #404040;
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #141414;
+    cursor: pointer;
 }
+
+.WorkEx__wrapper:hover {
+    background: #1a1a1a;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.WorkEx__wrapper.expanded {
+    background: #1a1a1a;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
 .WorkExRow{
     display: flex;
     flex-direction: row;
@@ -16,8 +33,14 @@
 .WorkExRow__imgWrapper{
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
+.WorkExRow__imgWrapper:hover {
+    transform: scale(1.05);
+}
 
 .WorkExRow__img{
     display: flex;
@@ -28,7 +51,25 @@
 }
 
 .WorkEx__timeAddress{
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    font-style: italic;
+    padding-right: 20px;
     font-size: 0.9em;
+    color: #999;
+    font-weight: 500;
+}
+
+.WorkEx__timeAddress div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.WorkEx__timeAddress div:nth-child(2){
+    margin-top: 8px;
 }
 
 .WorkExRow__playButton{
@@ -41,14 +82,13 @@
     justify-content: center;
     display: flex;
     opacity: 0;
-    background-image: linear-gradient(
+    background: linear-gradient(
         180deg, 
-        transparent 50%,
-        rgba(52, 50, 50, 0.61),
-        #111
+        transparent 10%,
+        rgba(20, 20, 20, 0.7) 60%,
+        rgba(20, 20, 20, 0.9) 100%
     );
-    font-size: 50px;
-    transition: 0.5s;
+    transition: all 0.3s ease;
 }
 
 .WorkExRow__playButton:hover{
@@ -58,6 +98,13 @@
 .WorkExRow__imgWrapper > img{
     width: 12rem;
     height: 5rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.WorkEx__info {
+    padding-right: 20px;
+    flex: 1;
 }
 
 .WorkExRow__idx{
@@ -66,12 +113,14 @@
     justify-content: center;
     font-weight: 600;
     font-size: 1.5em;
-    color: #d2d2d2;
+    color: #999;
     padding: 0 20px 0 0;
 }
 
 .WorkEx__header{
     display: flex;
+    margin-bottom: 15px;
+    position: relative;
 }
 .WorkEx__name{
     font-size: 18px;
@@ -82,37 +131,60 @@
 
 .WorkEx__name > span:first-child{
     font-weight: 800;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .WorkEx__name > span:nth-child(2){
-    font-size: 15px;
-}
-
-.WorkEx__timeAddress{
-    margin-left: auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;  
-    font-style: italic;
-}
-
-.WorkEx__timeAddress div:nth-child(2){
-    margin-top: 5px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 500;
 }
 
 .WorkEx__description{
     font-size: 14px;
-    line-height: 1.2rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+}
+
+.WorkEx__description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .WorkEx__description li{
     text-align: justify;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.WorkEx__description li::before {
+    content: "•";
+    color: #999;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 .WorkEx__skills{
     font-size: 14px;
-    font-weight: 200;
-    margin-bottom: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #999;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.WorkEx__skills::before {
+    content: "Skills:";
+    color: #999;
+    font-weight: 600;
+    margin-right: 8px;
 }
 
 .WorkEx--fadeButton{
@@ -127,6 +199,31 @@
     );
     z-index: 1;
     width: 100%;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.icon {
+    margin-right: 6px;
+    color: #999;
+}
+
+.play-icon {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Media query for smaller screens */
@@ -158,6 +255,14 @@
         opacity: 1;
         font-size: 25px;
     }
+    .skill-tag {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .play-icon {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 812px) {
@@ -187,5 +292,13 @@
     .WorkExRow__playButton{
         opacity: 1;
         font-size: 15px;
+    }
+    .skill-tag {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+    
+    .play-icon {
+        font-size: 20px;
     }
 }

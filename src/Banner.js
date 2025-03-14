@@ -1,54 +1,91 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import { MdEmail } from "react-icons/md";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import useTypewriter from 'react-typewriter-hook';
-import profilePhoto from './images/personal_headshot.jpeg'
-import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
-import collageGIF from "./images/naresh_background.JPG";
-import staticImage from "./images/naresh_background.JPG";
+import profilePhoto from './images/personal_headshot.jpeg';
+import backgroundImage from "./images/naresh_background.JPG";
 
 function Banner() {
-    const name = "Naresh Kumar Kaushal";
-
-    const [background, setBackground] = useState(collageGIF);
-    const gifDuration = 5000; // Duration of your GIF in milliseconds
+    const [isVisible, setIsVisible] = useState(false);
+    const [startTyping, setStartTyping] = useState(false);
 
     useEffect(() => {
-        // Switch to the static image after the GIF has played for its duration
+        // Add a small delay before showing the content for a smooth entrance
         const timer = setTimeout(() => {
-        setBackground(staticImage);
-        }, gifDuration);
+            setIsVisible(true);
+            // Start typing effect after content is visible
+            setTimeout(() => setStartTyping(true), 400);
+        }, 300);
 
-        // Clear the timeout if the component unmounts
         return () => clearTimeout(timer);
     }, []);
 
     return (
-        <header className='banner' id="banner">
-            <div className='banner__contents'>
-                <h1 className="banner__title">
-                    <div>
-                        <Typewriter
-                        onInit={(typewriter) => {
-                            typewriter.typeString('Naresh Kumar Kaushal').start();
-                        }}
-                        />
+        <header 
+            className='banner' 
+            id="banner" 
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
+            <div className={`banner__contents ${isVisible ? 'visible' : ''}`}>
+                <div className="banner__text-content">
+                    <h1 className="banner__title">
+                        <div className="banner__name">
+                            {startTyping ? (
+                                <Typewriter
+                                    onInit={(typewriter) => {
+                                        typewriter
+                                            .changeDelay(70)
+                                            .typeString('Naresh Kumar Kaushal')
+                                            .start();
+                                    }}
+                                    options={{
+                                        cursor: '',
+                                        delay: 70
+                                    }}
+                                />
+                            ) : <span style={{ opacity: 0 }}>Naresh Kumar Kaushal</span>}
+                        </div>
+                        <span className="banner__pronouns">(he/him)</span>
+                    </h1>
+                    
+                    <div className='banner__buttons'>
+                        <a 
+                            href="mailto:kaushalnaresh2689@gmail.com" 
+                            className='banner__button'
+                            aria-label="Email"
+                        >
+                            <MdEmail />
+                        </a>
+                        <a 
+                            href="https://github.com/KaushalNaresh" 
+                            className='banner__button'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <AiFillGithub />
+                        </a>
+                        <a 
+                            href="https://www.linkedin.com/in/nareshkumarkaushal" 
+                            className='banner__button'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <AiFillLinkedin />
+                        </a>
                     </div>
-                    <span>(he/him)</span>
-                </h1>
-                <div className='banner__buttons'>
-                    <a href="mailto:kaushalnaresh2689@gmail.com" className='banner__button'><MdEmail /></a>
-                    <a href="https://github.com/KaushalNaresh" className='banner__button'><AiFillGithub /></a>
-                    <a href="https://www.linkedin.com/in/nareshkumarkaushal" className='banner__button'><AiFillLinkedin /></a>
                 </div>
+
                 <div className='banner__profilePhoto'>
-                    <img src={profilePhoto} alt="Profile" />
+                    <div className="banner__photo-container">
+                        <img src={profilePhoto} alt="Naresh Kumar Kaushal" />
+                    </div>
                 </div>
             </div>
 
-            <div className='banner--fadeButton' />
+            <div className='banner--fadeBottom' />
         </header>
     );
 }

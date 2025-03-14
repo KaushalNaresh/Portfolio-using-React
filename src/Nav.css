@@ -1,13 +1,13 @@
 .nav{
     position: fixed;
     top: 0;
-    padding: 10px 10px 10px 0px;
+    padding: 20px 0;
     width: 100%;
     height: 30px;
-    z-index: 5;
-    transition-timing-function: ease-in;
-    transition: all 0.5s;
+    z-index: 1000;
+    transition: all 0.3s ease;
     display: flex;
+    backdrop-filter: blur(10px);
 }
 
 .nav__hamburger-icon {
@@ -45,8 +45,9 @@
 
 .nav__buttons{
     display: flex;
-    flex: 0.50;
+    flex: 0.3;
     justify-content: flex-end;
+    padding-right: 5%;
 }
 
 .nav__buttons.open{
@@ -58,31 +59,47 @@
 
 .nav__hyperlinks{
     display: flex;
-    /* gap: 50px; */
-    justify-content: space-between;
-    flex: 0.50;
+    justify-content: center;
+    flex: 0.7;
     align-items: center;
-    margin-left: 5%;
+    gap: 40px;
     font-size: 15px;
 }
 
 .nav__hyperlinks > a{
     cursor: pointer;
-    color: white;
+    color: #d4d4d4;
     text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.nav__hyperlinks a:hover{
-    font-weight: bold;
+.nav__hyperlinks > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #e50914;
+    transition: width 0.3s ease;
+}
+
+.nav__hyperlinks > a:hover {
+    color: white;
+}
+
+.nav__hyperlinks > a:hover::after {
+    width: 100%;
 }
 
 .nav__download{
-    /* position: fixed;
-    right: 100px; */
     color: #9e9c9c;
     font-size: 35px;
     cursor: pointer;
-    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
 #nav__download__id{
@@ -90,15 +107,17 @@
 }
 
 .nav__download > span{
-    font-size: 12px;
+    font-size: 14px;
     color: #9e9c9c;
-    display: none;
-    align-self: center;
-    padding-left: 5px;
+    margin-left: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.nav__download > span:hover{
+.nav__download:hover,
+.nav__download:hover > span {
     color: white;
+    transform: translateY(-2px);
 }
 
 #nav__download{
@@ -122,7 +141,8 @@
 }
 
 .nav__black {
-    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 15px 0;
 }
 
 .nav__avatar{
@@ -171,13 +191,62 @@
     .nav__hamburger-icon {
         display: block;
         margin-left: 5%;
-        font-size: 20px;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__hamburger-icon:hover {
+        transform: scale(1.1);
     }
     #nav__download{
         display: none;
     }
     .close{
         display: none;
+    }
+    .nav__sidebar.open {
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        background: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav__hyperlinks.open {
+        margin-top: 40px;
+        gap: 25px;
+    }
+
+    .nav__hyperlinks.open > a {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    .nav__hyperlinks.open > a:hover {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+
+    .nav__cancel.open {
+        font-size: 24px;
+        color: #9e9c9c;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .nav__cancel.open:hover {
+        color: white;
+        transform: rotate(90deg);
     }
 }
 

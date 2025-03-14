@@ -4,169 +4,306 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal {
-    background-color: #141414; /* Netflix's dark background */
-    color: #fff; /* White text for readability */
-    border-radius: 8px; /* Soften the corners */
-    padding: 20px; /* Space inside the modal */
-    position: fixed;
-    max-height: 80vh; /* Adjust the height as needed */
+    background-color: #141414;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
     overflow-y: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    position: relative;
     z-index: 1001;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: zoomIn 0.3s ease;
+    transform-origin: center;
+}
+
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
 }
 
 .modal-close {
-    float: right;
-    font-size: 1.5rem;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.8rem;
     border: none;
-    background: none;
+    background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     color: white;
-}
-  
-/* .modal-content {
-    clear: both;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    flex: 75%;
-    font-size: 14px;
-    gap: 2px;
-} */
-
-.modal-education__info{
-    display: flex;
-    flex-direction: column;
-    flex: 75%;
-    font-size: 14px;
-    gap: 10px;
-    /* margin-bottom: 5px; */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.modal-education__timeline{
-    margin-left: auto;
-    text-align: center;  
-    font-size: 14px;
-    flex: 25%;
-}
-
-.modal-education__details{ 
-    display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-}
-
-.modal-education__timeline > div:first-child{
-    color: #777;
-}
-
-.modal-education__info > h1{
-    font-size: 21px;
-    margin: 10px 0;
-}
-
-.modal-education__extracurricular{
-    text-align: justify;
-}
-
-.modal-extracurr__achvmnts{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    gap: 10px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 1024px) {
-    .modal-education__info .modal-education__achievements .modal-education__extracurricular{
-        font-size: 12px;
-    }
-    .modal-education__info > h1{
-        font-size: 16px;
-    }
-    .modal-education__timeline{  
-        font-size: 12px;
-    }
-    .modal-education__header{
-        font-size: 18px;
-    }
-    .modal-education{
-        padding: 8px 0px;
-    }
-    .modal{
-        width: 60%;
-        height: 50%;
-    }
-}
-
-@media (max-width: 812px) {
-    .modal-education__info .modal-education__achievements .modal-education__extracurricular{
-        font-size: 9px;
-    }
-    .modal-education__info > h1{
-        font-size: 11px;
-    }
-    .modal-education__timeline{ 
-        font-size: 9px;
-    }
-    .modal-education__header{
-        font-size: 15px;
-    }
-    .modal-education{
-        padding: 6px 0px;
-    }
-    .modal{
-        width: 80%;
-        height: 50%;
-    }
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
 }
 
 .modal-img-banner {
     position: relative;
     width: 100%;
-    height: 200px; /* Set a fixed height for the banner */
-    overflow: hidden; /* Hide overflow to maintain a clean look */
+    height: 280px;
+    overflow: hidden;
+    background-color: #0a0a0a;
 }
 
 .modal-img-banner > img {
     width: 100%;
     height: 100%;
-    border: none; /* Remove any default border from the iframe */
-    position: 'absolute';
-    top: 0;
-    left: 0;
+    object-fit: cover;
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.modal:hover .modal-img-banner > img {
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 .modal-university-name-overlay {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    text-align: center;
-    
-    height: 4rem;
+    left: 0;
+    right: 0;
+    padding: 80px 30px 25px;
     background-image: linear-gradient(
         180deg, 
-        transparent,
-        rgba(37,37,37,0.61),
-        #141414
+        transparent 0%,
+        rgba(10, 10, 10, 0.8) 35%,
+        rgba(10, 10, 10, 0.95) 75%,
+        #141414 100%
     );
-    color: white;
 }
 
 .modal-university-name {
-    padding: 5px 0; /* Padding for the text */
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold;
-    position: inherit;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-education__details {
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+
+.modal-education__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.modal-education__info > div {
+    font-size: 1.2rem;
+    color: #d4d4d4;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.modal-education__info > div > span {
+    color: #999;
+}
+
+.modal-education__info > span {
+    font-size: 1rem;
+    color: #999;
+}
+
+.modal-education__timeline {
+    min-width: 200px;
+    text-align: right;
+}
+
+.modal-education__timeline > div:first-child {
+    font-size: 1.1rem;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.modal-education__timeline > div:last-child {
+    font-size: 1rem;
+    color: #999;
+}
+
+.modal-extracurr__achvmnts {
+    padding: 0 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.modal-education__extracurricular,
+.modal-education__achievements {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.modal-education__extracurricular h3,
+.modal-education__achievements h3 {
+    color: #fff;
+    margin: 0 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.modal-education__extracurricular ul,
+.modal-education__achievements ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.modal-education__extracurricular li,
+.modal-education__achievements li {
+    color: #d4d4d4;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.modal-education__extracurricular li:last-child,
+.modal-education__achievements li:last-child {
+    margin-bottom: 0;
+}
+
+.modal-education__extracurricular li strong {
+    color: #46d369;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal {
+        width: 95%;
+    }
+
+    .modal-img-banner {
+        height: 240px;
+    }
+
+    .modal-university-name-overlay {
+        padding: 70px 25px 22px;
+    }
+
+    .modal-university-name {
+        font-size: 2rem;
+    }
+
+    .modal-education__details {
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .modal-education__info > div {
+        font-size: 1.1rem;
+    }
+
+    .modal-extracurr__achvmnts {
+        padding: 0 25px 25px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 812px) {
+    .modal {
+        max-height: 90vh;
+    }
+
+    .modal-img-banner {
+        height: 200px;
+    }
+
+    .modal-university-name-overlay {
+        padding: 60px 20px 20px;
+    }
+
+    .modal-university-name {
+        font-size: 1.6rem;
+    }
+
+    .modal-education__details {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .modal-education__timeline {
+        text-align: left;
+        min-width: unset;
+    }
+
+    .modal-extracurr__achvmnts {
+        grid-template-columns: 1fr;
+        padding: 0 20px 20px;
+        gap: 20px;
+    }
+
+    .modal-education__info > div {
+        font-size: 1rem;
+    }
+
+    .modal-education__extracurricular h3,
+    .modal-education__achievements h3 {
+        font-size: 1.1rem;
+    }
+
+    .modal-education__extracurricular li,
+    .modal-education__achievements li {
+        font-size: 0.9rem;
+    }
 } 

@@ -1,0 +1,156 @@
+.introduction {
+    padding: 50px 0;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+}
+
+.introduction__contents {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.introduction__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.introduction__header > span {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.introduction__header svg {
+    color: #e50914;
+    font-size: 1.8rem;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.introduction__text {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.introduction__text p {
+    color: #d4d4d4;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2px;
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.introduction__greeting {
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    text-align: left !important;
+}
+
+.introduction__connect {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-align: left !important;
+}
+
+.introduction__text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .introduction__contents {
+        padding: 0 30px;
+    }
+
+    .introduction__header > span {
+        font-size: 1.6rem;
+    }
+
+    .introduction__header svg {
+        font-size: 1.6rem;
+    }
+
+    .introduction__text p {
+        font-size: 0.95rem;
+    }
+
+    .introduction__greeting {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 812px) {
+    .introduction {
+        padding: 40px 0;
+    }
+
+    .introduction__contents {
+        padding: 0 20px;
+    }
+
+    .introduction__header > span {
+        font-size: 1.4rem;
+    }
+
+    .introduction__header svg {
+        font-size: 1.4rem;
+    }
+
+    .introduction__text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    .introduction__greeting {
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .introduction {
+        padding: 30px 0;
+    }
+
+    .introduction__contents {
+        padding: 0 15px;
+    }
+
+    .introduction__header > span {
+        font-size: 1.3rem;
+    }
+
+    .introduction__header svg {
+        font-size: 1.3rem;
+    }
+
+    .introduction__text p {
+        font-size: 0.85rem;
+    }
+
+    .introduction__greeting {
+        font-size: 0.9rem !important;
+    }
+} 
