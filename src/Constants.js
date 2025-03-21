@@ -41,23 +41,24 @@ export const education = [
 export const work_experiences = [
     {
         name: "Wayfair",
-        role: "Software Engineer - Full Time",
-        skills: "Python, GraphQl, PostgreSQL, TypeScript, Kibana, Kubernetes, Docker, Git, Datadog, Kafka, GCP",
+        role: "Software Engineer",
+        skills: "Python, GraphQl, PostgreSQL, TypeScript, Kibana, Kubernetes, Docker, Git, Datadog, Kafka, GCP, Jest, PyTest, Buildkite",
         address: "Austin, Texas",
         timeline: "Jul 2024 - Mar 2025",
         website: "https://www.wayfair.com/",
         description: {
-            "Exception management system": " Developed an automated exception engine using Python, GraphQL, PostgreSQL, TypeScript to eliminate shipment issues with potential financial risk across microservices slashing service tickets by 75% and enhancing operational efficiency.",
+            "Exception management system": " Developed an automated exception handling microservice using Python, GraphQL, PostgreSQL, TypeScript, AWS containerized with Docker to eliminate shipment issues across microservices, boosting revenue by 40%.",
             "Automated Exceptions": " Designed a Yacc and Lex-based parser to evaluate complex business rules, enabling automatic assignment of critical flags and exceptions across 35+ workflows and ensuring proactive issue resolution.",
-            "Track and Trace service ": " Enhanced tracking service using Python, Kafka and GCP capturing 90% shipment milestones in real time from API's and EDI services improving tracking accuracy by 15%",
-            "Profit-Driven Feature Development":" Collaborated with the supply chain and retail tech team to engineer and deploy scalable features, utilizing Python, GraphQL, and TypeScript to streamline shipment lifecycle management. Our efforts enhanced operational efficiency and drove revenue growth tby 15%.",
-            "AI-Driven Solutions":" Designed and developed an intelligent AI agent, using Python, TypeScript, graphQL and OpenAI API (LLMs), integrated with Wayfair's internal systems to automate basic CRUD operations, OCR on documents and streamline shipment tracking reducing manual workload."
+            "Track and Trace service ": " Led the redesign and development of tracking service using Python, Kafka, GraphQL, SQLAlchemy and GCP capturing 90% shipment milestones in real time from 3 APIs and EDI connections, increasing tracking accuracy by 15%.",
+            "Testing and Monitoring":" Ensured code reliability through TDD, comprehensive unit and integration tests using Pytest, Factory Boy for backend and Jest, Cypress for frontend and real-time log monitoring using Datadog, Kibana and Grafana across all projects.",
+            "On Call": " Performed on-call rotations monitoring Kubernetes pods on GCP, utilized Kanban for prioritizing production issues, and reduced MTTR by 25%",
+            "AI-Driven Solutions":" Developed an intelligent AI agent using Python, Langchain, Langgraph and OpenAI API to automate basic CRUD operations, OCR on documents slashing service tickets by 75%"
         },
         logo: "wayfair"
     },
     {
         name:"University of California Davis",
-        role:"Software Developer - Part Time",
+        role:"Software Developer",
         skills:"React.js, Node.js, Express.js, MongoDB, CSS, GitHub",
         address:"Davis, California",
         timeline:"Nov 2023 - Jun 2024",
@@ -71,8 +72,8 @@ export const work_experiences = [
     },
     {
         name:"Center for Mind and Brain (In collaboration with Accenture)",
-        role:"Machine Learning Researcher - Part Time",
-        skills:"Signal Processing, Python, Machine Learning, Speech Anatomy",
+        role:"Machine Learning Researcher",
+        skills:"Signal Processing, Python, PyTorch, Machine Learning, Speech Anatomy",
         address:"Davis, California",
         timeline:"Apr 2022 - June 2024",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
@@ -84,21 +85,21 @@ export const work_experiences = [
     },
     {
         name:"WOAS Technology Pvt. Ltd.",
-        role:"Full Stack Developer - Full Time",
-        skills:"Java, Spring Framework, JavaScript, CSS, MySQL, HTML",
+        role:"Full Stack Developer",
+        skills:"Java, Spring Framework, Spring Boot, Hibernate, Microsft Azure, JavaScript, CSS, MySQL, HTML, JUnit, Jenkins",
         address:"Bangalore, India",
-        timeline:"Jun 2021 – Apr 2022",
+        timeline:"Jun 2021 – Jul 2022",
         website:"https://wooqer.com",
         description:{
-            "Gallery for better Visual Experience":" Spearheaded the development of an interactive gallery, using Java, HTML and Spring MVC framework following Agile methodogies, that enabled users to pin feedback on images and send notifications; increasing customer engagement by 45%.",
-            "API development": " Architected new RESTful APIs for microservices using Java and optimized web APIs to enhance performance, achieving a 25% reduction in critical response times. Documented all API functionalities comprehensively using Swagger",
-            "Debugging and Documentation":" Managed end-to-end software development, using Jenkins for CI/CD pipelines, JIRA to resolve 100+ bugs, and JUnit for unit testing, enhancing product stability and customer service satisfaction."
+            "Gallery for better Visual Experience":" Spearheaded the development of an interactive gallery, using Java, Spring Boot, JSP, JavaScript, Azure, HTML and CSS following Agile methodogies, that enabled users to pin feedback on images and send notifications; increasing customer engagement by 45%.",
+            "API development": " Designed new RESTful APIs for microservices using Java, Swagger, Postman and optimized SQL queries to enhance performance, achieving a 25% reduction in critical response times. Documented all API functionalities comprehensively using Swagger",
+            "Debugging and Documentation":" Contributed to both end-to-end software testing and deployment, using Jenkins for CI/CD pipeline, resolving 100+ bugs tracked using JIRA, and JUnit for unit and integration testing, ensuring product stability and reliability."
         },
         logo:"wooqer"
     },
     {
         name:"Planful",
-        role:"Software Developer Engineer - 1 Co-Op",
+        role:"Software Developer Engineer - 1",
         skills:"C#, MySQL, Git, Object Oriented Programming",
         address:"Hyderabad, India",
         timeline:"June 2020 – Dec 2020",
@@ -109,77 +110,6 @@ export const work_experiences = [
         },
         logo:"planful"
     },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
-    // {
-    //     name:"Planful (Host Analytics)",
-    //     role:"Software Developer Engineer - 1 Intern",
-    //     skills:"C#, MySQL, Git, Object Oriented Programming",
-    //     address:"Telangana, India",
-    //     timeline:"June 2020 – Dec 2020",
-    //     website:"https://planful.com",
-    //     description:{
-    //         "Data quality assessment tool": "Contributed to the data analytics team by designing a tool that capture anomalies in financial data and assigns it a quality score which helps customers in making important conclusions and predictions.",
-    //         "":"Able to detect sparse dataset, dataset with high fluctuations and with inconsistent values using this new tool.",
-    //         "Debugging":"Contributed in debugging and testing the code to resolve pending issues on JIRA and documenting the code to help new joiners in their onboarding process."
-    //     },
-    //     logo:"planful"
-    // },
-    
 ];
 
 export const teaching_experiences = [
