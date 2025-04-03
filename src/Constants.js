@@ -41,7 +41,7 @@ export const education = [
 export const work_experiences = [
     {
         name: "Wayfair",
-        role: "Software Engineer",
+        role: "Software Engineer (Full Time)",
         skills: "Python, GraphQl, PostgreSQL, TypeScript, Kibana, Kubernetes, Docker, Git, Datadog, Kafka, GCP, Jest, PyTest, Buildkite",
         address: "Austin, Texas",
         timeline: "Jul 2024 - Mar 2025",
@@ -58,34 +58,35 @@ export const work_experiences = [
     },
     {
         name:"University of California Davis",
-        role:"Software Developer",
+        role:"Software Developer (Part Time)",
         skills:"React.js, Node.js, Express.js, MongoDB, CSS, GitHub",
         address:"Davis, California",
         timeline:"Nov 2023 - Jun 2024",
         website:"https://github.com/KaushalNaresh/Indian_Davis_Community",
         description: {
             "Indian Community @ Davis (ICD) web platform":" Co-founded and leading the development of open source full-stack web application using React.js, MongoDB and Node.js aimed at enhancing academic and social experience of student community at UC Davis.",
-            "Features": " Engineered the frontend UI/UX design for dashboard and roommate finder feature using React.js and CSS; currently developing an integrated event calendar and a personalized recommendation system",
-            "API design":" Designed secure, efficient RESTful APIs with Node.js and Express.js for backend, ensuring compliance with industry security standards and optimizing data retrieval for minimal response times."
+            "Frontend": " Engineered the frontend UI/UX for dashboard and roommate finder feature using React.js and CSS while also designed secure and efficient RESTful APIs leveraging NoSQL database to ensure fast and reliable data access.",
+            "Presonalised Recommendation system":" Built a personalized roommate recommendation engine using collaborative filtering algorithms and user preference analysis in Python and scikit-learn, enhancing user engagement and successful roommate matches."
         },
         logo:"icd" 
     },
     {
         name:"Center for Mind and Brain (In collaboration with Accenture)",
-        role:"Machine Learning Researcher",
-        skills:"Signal Processing, Python, PyTorch, Machine Learning, Speech Anatomy",
+        role:"Machine Learning Researcher (Part Time)",
+        skills:"Signal Processing, Python, PyTorch, PCA, t-SNE, Machine Learning, Speech Anatomy",
         address:"Davis, California",
-        timeline:"Apr 2022 - June 2024",
+        timeline:"Apr 2023 - June 2024",
         website:"https://medium.com/@nareshkaushal/a280968d1ab",
         description:{
-            "Silent Speech Interface":" Led a cross-functional team in collaboration with Accenture to develop a machine learning model using CNN, attention, transformers and seq-to-seq techniques to generate speech in patients with speech disorders achieving 29% WER",
-            "Managed the coordination":" of clinical trials involving laryngectomy patients, implementing python scripts for accurate recording and synchronization of sEMG signals, enhancing data integrity and trial efficiency",
+            "Silent Speech Interface":" Led a team of 4 to build a multimodal generative speech synthesis model using CNN, transformers, attention, and seq-to-seq architectures in PyTorch, reducing the Word Error Rate (WER) to 29% for speech-impaired patients",
+            "Engineered end-to-end data pipelinesn":" Engineered end-to-end data pipelines to record and align 50+ hours of sEMG, audio and video data using Python, LSL, MFA and MATLAB, increasing trial efficiency while training models.",
+            "Exploratory Data analysis":" Conducted exploratory data analysis and high-dimensional feature visualization using t-SNE, PCA, scikit-learn, and matplotlib, guiding feature selection and improved model convergence."
         },
         logo:"cmb"
     },
     {
         name:"WOAS Technology Pvt. Ltd.",
-        role:"Full Stack Developer",
+        role:"Full Stack Developer (Full Time)",
         skills:"Java, Spring Framework, Spring Boot, Hibernate, Microsft Azure, JavaScript, CSS, MySQL, HTML, JUnit, Jenkins",
         address:"Bangalore, India",
         timeline:"Jun 2021 – Jul 2022",
@@ -99,7 +100,7 @@ export const work_experiences = [
     },
     {
         name:"Planful",
-        role:"Software Developer Engineer - 1",
+        role:"Software Developer Engineer - 1 (Co-op)",
         skills:"C#, MySQL, Git, Object Oriented Programming",
         address:"Hyderabad, India",
         timeline:"June 2020 – Dec 2020",
